@@ -1,0 +1,815 @@
+เราใช้ AI เพื่อการวิจัยอย่างไรบ้าง
+
+VDO
+https://www.youtube.com/watch?v=k7PvscqGD24
+
+Course 
+https://cbtumu.net/courses/basic-prompt-engineering-2026/	
+Code : TVYIWTE7
+
+
+
+นโยบายการใช้เทคโนโลยีปัญญาประดิษฐ์แบบเจเนอเรทีฟ Link นี้ครับ
+https://muit.mahidol.ac.th/downloads/act-policy/GenAI-mahidol-policy-2568.pdf
+
+
+ประกาศ บัณฑิตวิทยาลัย มหาวิทยาลัยมหิดล เรื่อง แนวปฏิบัติการตรวจสอบการคัดลอกผลงานทางวิชาการ และการใช้เครื่องมือทางปัญญาประดิษฐ์
+https://graduate.mahidol.ac.th/storage/IT-SERVICE/Announce/PR07128.pdf
+
+
+แนวปฏิบัติในการใช้เทคโนโลยีปัญญาประดิษฐ์แบบเจเนอเรทีฟ (Generative Artificial Intelligence) ในบริบทของการศึกษา (รามา)
+https://www.rama.mahidol.ac.th/meded/sites/default/files/public/techdev/tecmanual/yr2025/18.0868%20GenAI%20in%20Education%20guideline.pdf
+
+
+
+แนวทางการใช้ AI เพื่อช่วยในการทำวิจัย
+Taweesak Samanchuen
+Credit : ITM 68, MULKC 
+Dec 4, 2025
+
+AI Chatbot Overview
+
+
+Large Language Model (LLM)
+แบบจำลองภาษาขนาดใหญ่ (LLM) คือ โปรแกรมปัญญาประดิษฐ์ประเภทหนึ่งที่ ได้รับการฝึกฝนจากชุดข้อมูลจำนวนมหาศาล เพื่อทำความเข้าใจและสร้างข้อ ความที่เหมือนมนุษย์ สร้างขึ้นบนสถาปัตยกรรม ดีปเลิร์นนิง เช่น ทรานสฟอร์ เมอร์ (transformers) โดย LLM สามารถทำงานประมวล ผลภาษาธรรมชาติ (NLP) ที่หลากหลายได้ รวมถึงการแปลภาษา การตอบคำถาม และการสร้าง เนื้อหา
+
+
+AI Chatbot
+Chatbot 
+
+
+
+
+
+Limitation of LLM
+Outdated knowledge: LLMs พึ่งพาข้อมูลการฝึกฝนของพวกมันเพียงอย่างเดียว หากไม่ได้รับการผสานรวมภายนอก LLMs จะไม่สามารถให้ข้อมูลล่าสุด จากโลกแห่งความจริงได้
+
+Inability to take action: LLMs ไม่สามารถดำเนินการที่เป็นปฏิสัมพันธ์ เช่น การค้นหา การคำนวณ หรือการค้นข้อมูล ได้ ซึ่งทำให้ฟังก์ชันการทำงานถูกจำกัดอย่างมาก
+
+Lack of context: LLMs อาจพบปัญหาในการเข้าใจและรวมบริบท prompt หรือการสนทนา ก่อนหน้า มันอาจไม่จดจำรายละเอียดที่ได้กล่าวถึงก่อนหน้านี้ หรืออาจไม่สามารถให้ข้อมูลเพิ่มเติมที่เกี่ยว ข้องได้เกินกว่า prompt ที่ให้มา 
+
+Hallucination risks:  การขาดความรู้เกี่ยวกับหัวข้อบางอย่างอาจทำให้ LLMs สร้างเนื้อหาที่ไม่ถูกต้องหรือไร้สาระได้ หากไม่ได้รับการปรับให้เหมาะสม
+
+LLM with Function Calling
+
+
+Lab n8n
+
+ประเภทของ LLM
+แนวคิดนี้มาจากงานของนักเศรษฐศาสตร์เชิงพฤติกรรม Daniel Kahneman หนังสือ Thinking, Fast and Slow ที่แบ่งการทำงานของจิตใจมนุษย์ออกเป็นสองระบบ: ระบบการคิดของมนุษย์, ลักษณะการทำงานใน LLM
+System 1 (Fast),Fast Model (หรือ Fast Thinking)
+System 2 (Slow),Thinking Model (หรือ Slow Thinking / Reasoning Model)
+
+
+1. Fast Model  
+ความเร็ว
+รวดเร็ว (Fast) และ ฉับไว (Immediate)
+กลไก
+LLM สร้างคำตอบออกมาทีละโทเค็นทันที โดยอิงจากการ จดจำรูปแบบ (Pattern Recognition) และความน่าจะเป็นทางสถิติที่เรียนรู้มาจากการฝึกฝนข้อมูลจำนวนมหาศาล
+การให้เหตุผล
+สัญชาตญาณ (Intuitive) ไม่มีการแสดงขั้นตอนการคิดที่ชัดเจน
+ความแม่นยำ
+แม่นยำสำหรับงานที่ เรียบง่าย หรือ คุ้นเคย แต่อาจมีข้อผิดพลาด (Hallucination) หรือความไม่สอดคล้องทางตรรกะในงานที่ซับซ้อน
+การใช้งาน
+การสนทนาทั่วไป (Casual Conversation), การสร้างข้อความอย่างรวดเร็ว, การแปลคำศัพท์ง่าย ๆ
+
+2. Thinking Model / Reasoning Model  
+ความเร็ว
+ช้าลง (Slower) และ รอบคอบ (Deliberative) เนื่องจากต้องใช้โทเค็นในการ ""คิด"" เพิ่มเติม"
+กลไก
+โมเดลได้รับการปรับจูนหรือกระตุ้นด้วยเทคนิคอย่าง Chain-of-Thought (CoT) Prompting (เช่น การสั่งให้ ""คิดอย่างเป็นขั้นเป็นตอน"") ทำให้โมเดลสร้าง ร่องรอยการให้เหตุผล (Reasoning Traces) ภายในก่อนที่จะสร้างคำตอบสุดท้าย
+การให้เหตุผล
+เป็นตรรกะ (Logical) และ เป็นขั้นเป็นตอน (Step-by-Step) บางครั้งผู้ใช้สามารถเห็น 'กระบวนการคิด' นี้ได้
+ความแม่นยำ
+มีความแม่นยำและน่าเชื่อถือ สูงขึ้น อย่างมากสำหรับงานที่ต้องใช้ ตรรกะ การคำนวณ หรือการแก้ปัญหาที่ซับซ้อน
+การใช้งาน
+การแก้โจทย์คณิตศาสตร์, การวิเคราะห์เชิงตรรกะ, การวางแผนหลายขั้นตอน, การสร้างโค้ดที่ซับซ้อน
+
+การใช้ AI ช่วยทำงานเอกสาร
+
+แบบฝึกหัด การใช้ AI ช่วยทำงานเอกสาร
+สรุปความ
+สกัดข้อมูล
+เพิ่มลดข้อความ
+เขียนจากประเด็นที่กำหนด
+การเรียบเรียงข้อความจากข้อมูลร่าง
+https://docs.google.com/document/d/1LcZ0yvRMhD9OpmqfU994J0wvbMfnR729nfRoS4gOyLA/edit?usp=sharing
+
+Research Processes 
+
+Generic Research Process
+
+Engineering Research Process
+
+Data Science Research Process
+
+Basic Research Process
+
+Research Ethic
+จริยธรรมการวิจัย คือ หลักการและแนวทางที่ช่วยให้การทำวิจัยดำเนินไปด้วย ความซื่อสัตย์ โปร่งใส และมีความรับผิดชอบ เพื่อคุ้มครองผู้เข้าร่วมวิจัย และรักษาความน่าเชื่อถือของงานวิจัย หลักการสำคัญประกอบด้วย ความซื่อสัตย์ ความเที่ยงตรง ความถูกต้องรอบคอบ ความรับผิดชอบต่อข้อมูลและผลการวิจัย รวมถึงการเคารพทรัพย์สินทางปัญญาและสิทธิของผู้เข้าร่วมทุกคน 
+
+Basic Principle of Using AI
+
+Elsevier’s 
+Generative AI Policies for Journals 
+https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals
+
+สำหรับผู้แต่ง
+
+การใช้งาน: สามารถใช้ AI เพื่อช่วยปรับปรุงภาษาให้อ่านง่ายขึ้นได้ แต่ ห้าม ใช้ AI แทนที่การคิดวิเคราะห์ของมนุษย์ เช่น การสร้างข้อมูลเชิงลึกทางวิทยาศาสตร์ การสรุปผล หรือการตีความข้อมูล
+ความรับผิดชอบ: ผู้แต่งต้องรับผิดชอบเนื้อหาทั้งหมดในบทความ 100% ต้องตรวจสอบความถูกต้องของผลลัพธ์ที่ได้จาก AI อย่างละเอียด (ระวังข้อมูลเท็จหรืออ้างอิงปลอม)
+การเปิดเผยข้อมูล (Disclosure): ต้องระบุในบทความให้ชัดเจนว่ามีการใช้ AI ตัวไหนและเพื่อจุดประสงค์อะไร (ใส่ไว้ท้ายบทความก่อนรายการอ้างอิง)
+ความเป็นผู้แต่ง (Authorship): ห้าม ใส่ชื่อ AI เป็นผู้แต่งหรือผู้แต่งร่วม เพราะ AI ไม่สามารถรับผิดชอบหน้าที่ และจริยธรรมของผู้แต่งได้
+รูปภาพ: ห้าม ใช้ Generative AI สร้างหรือดัดแปลงรูปภาพในบทความ ยกเว้นกรณีที่การใช้ AI นั้นเป็นส่วนหนึ่ง ของระเบียบวิธีวิจัย (Research Design/Methods) ซึ่งต้องอธิบายให้ชัดเจน
+
+
+
+
+
+
+
+สำหรับผู้ประเมินบทความ
+ความลับ: ห้ามอัปโหลดบทความที่ได้รับมาเพื่อตรวจสอบลงในเครื่องมือ AI เด็ดขาด เพื่อรักษาความลับและลิขสิทธิ์ของผู้แต่ง
+การเขียนรายงาน: ห้ามใช้ AI ช่วยเขียนรายงานการประเมิน (Peer review report) เพราะการประเมินต้องอาศัยวิจารณญาณและความเชี่ยวชาญของมนุษย์เท่านั้น
+
+
+สำหรับบรรณาธิการ
+ความลับ: ห้ามอัปโหลดบทความหรือจดหมายโต้ตอบลงใน AI เพื่อรักษาความลับข้อมูล
+การตัดสินใจ: ห้ามใช้ AI ช่วยในการประเมินหรือตัดสินใจรับ/ปฏิเสธบทความ บรรณาธิการต้องเป็นผู้รับผิดชอบกระบวนการตัดสินใจทั้งหมดด้วยตนเอง
+
+
+
+Guideline for Al Research
+https://muit.mahidol.ac.th/update/post-65/
+
+Hybrid Intelligence Research Framework (HIRF)
+
+Definition
+HIRF: คือกรอบแนวทางการวิจัยที่ผสาน การคิดเชิงวิชาการของมนุษย์ เข้ากับ ความสามารถของ Generative AI ในลักษณะของ ความร่วมมือแบบวนซ้ำ และมีหลักจริยธรรมกำกับ โดยมีเป้าหมายเพื่อยกระดับคุณภาพ ประสิทธิภาพ และความคิดสร้างสรรค์ของงานวิจัย ขณะเดียวกันยังคงความเข้มข้นทางวิชาการ การตัดสินใจด้วยมนุษย์ และความเป็นต้นฉบับของงาน ไว้อย่างครบถ้วน
+
+Core Principle
+Human intelligence leads. AI assists.
+นักวิจัยยังคงเป็นผู้ตัดสินใจหลัก 
+AI ช่วยเสริม ขยาย และเร่งกระบวนการทำงานวิจัยให้มีประสิทธิภาพมากขึ้น
+
+Hybrid Intelligence Core Principle
+
+5-Stage HIRF
+1. Problem Framing & Research Focus
+2. Literature Review & Knowledge Expansion
+3. Research Design & Method Planning
+4. Data Work & Analytical Reasoning
+5. Scholarly Writing  
+
+
+ชื่อกระบวนการ
+บทบาทของมนุษย์
+บทบาทของ AI
+ผลลัพธ์สำคัญ
+1
+การกำหนดประเด็น
+วิจัยและขอบเขต
+ระบุปัญหา ช่องว่าง และความสำคัญ ตั้งคำถามวิจัย
+ช่วยสรุปภาพรวม ประมวลแนวคิด และเสนอรูปแบบประเด็น
+ประเด็นวิจัย ขอบเขต และคำถามวิจัยที่ชัดเจน
+2
+การทบทวนวรรณ
+กรรมและขยายองค์
+ความรู้
+ประเมินแหล่งข้อมูล วิพากษ์แนวคิด สร้างกรอบทฤษฎี
+รวบรวม สรุป จัดกลุ่ม และเชื่อมโยงวรรณกรรม
+สังเคราะห์วรรณกรรม กรอบแนวคิด ตารางอ้างอิง
+3
+การออกแบบวิธีวิจัย
+เลือกวิธีวิจัย ตัวแปร กลุ่มตัวอย่างและเครื่องมือ
+เสนอรูปแบบวิธีวิจัย สร้างเทมเพลตและ
+ตัวอย่างเครื่องมือ
+แผนการวิจัย เครื่องมือ และกลยุทธ์เก็บข้อมูล
+4
+ข้อมูลและวิเคราะห์ผล
+เก็บข้อมูล ตีความ และตรวจสอบความถูกต้อง
+ช่วยทำความสะอาดข้อมูล วิเคราะห์ และสร้างภาพสรุป
+ผลการวิเคราะห์ ตาราง/ภาพสรุป และคำอธิบาย
+5
+การเขียนและเผยแพร่
+ทางวิชาการ
+เรียบเรียงเหตุผล และข้อสรุป ตรวจคุณภาพงาน
+ช่วยร่าง ปรับภาษา และสร้างแผนภูมิ กราฟต่างๆ 
+รายงานวิจัย/วิทยานิพนธ์ บทความวิชาการ และสไลด์นำเสนอ
+
+
+Problem Framing & Research Focus
+Literature Review & Knowledge Expansion
+Research Design & Method Planning
+Data Work & Analytical Reasoning
+ Scholarly Writing 
+
+Issue/Topic
+Chapter 2
+Literature Review and Gap​ Analysis
+Chapter 3
+Methodology
+Chapter 4
+Result and Discussion
+ Chapter 5 
+Conclusion 
+ Chapter 1
+Introduction 
+ Abstract
+ Polishing
+
+Stage 1. 
+Problem Framing 
+& Research Focus
+
+Define Research Topic
+
+Define Research Topic
+
+Get Some Idea for Research Topics
+1. Define Your Scope and Interests
+Field/Discipline: e.g., Education, Healthcare, AI, Economics
+Sub-field or Methodology: e.g., AI in education, qualitative research, policy analysis
+Type of Research: Theoretical, empirical, experimental, applied
+Prompt Example:
+Suggest emerging research topics in the use of AI in higher education, with a focus on ethical implications and policy.
+
+
+Get Some Idea for Research Topics
+2. Ask for Emerging Trends or Gaps
+Use GenAI to surface current gaps or unexplored intersections in your field.
+💡 Prompt Examples:
+What are the research gaps in applying Generative AI in public sector data analysis?
+List controversial or under-researched areas in AI ethics and governance.
+
+
+Get Some Idea for Research Topics
+3. Ask for Specific Topic Suggestions
+Narrow the output by including your audience, setting, or use case.
+💡 Prompt Examples:
+Give me 5 research topics combining GenAI and statistical literacy for government employees.
+Suggest thesis topics on how GenAI can support qualitative data analysis in social sciences.
+
+
+Stage 2. 
+Literature Review & 
+Knowledge Expansion
+
+Literature Review with AI
+กำหนดขอบเขต (Scope) ของการทบทวนวรรณกรรม
+ค้นหาและสรุปบทความด้วย  AI
+ร่างสังเคราะห์เนื้อหา (Thematic Synthesis)  
+เรียบเรียง Literature Review 
+ตรวจสอบความถูกต้อง และอ้างอิงด้วยตนเอง
+
+กำหนดขอบเขต (Scope) 
+หัวข้อหลักของการวิจัย
+คำค้นหลัก (keywords)
+ช่วงเวลา (เช่น ปี 2015–2025)
+ฐานข้อมูลเป้าหมาย เช่น Scopus, PubMed, IEEE Xplore
+Quality of Research: Q1, Q2
+
+ตัวอย่าง:
+หัวข้อ: “การใช้ Generative AI ในการศึกษา”
+คำค้น: "Generative AI", "Education", "AI in teaching", "AI literacy"
+
+
+เครื่องมือ AI สำหรับสืบค้นงานวิจัย
+
+ค้นหาบทความ
+Scispace   https://scispace.com/
+Paperfinder https://paperfinder.allen.ai/chat
+Elicit   https://elicit.com/ 
+Consensus AI: https://consensus.app/
+Scopus AI https://www.scopus.com/
+Google Scholar Labs  https://scholar.google.com/ 
+
+SciSpace
+Credit: ITM 68
+
+
+จุดเด่น
+เมื่อกดค้นหาแล้วจะเรียบเรียงข้อมูลให้เป็นระเบียบ และแสดงข้อมูลที่สามารถ export ออกไปได้
+แบ่งหมวดหมู่สำหรับใช้งาน เช่น การใช้ AI ช่วยในการเขียน (AI Writer), ค้นหาหัวข้อ (Find Topic), ช่วยเขียน Citation (Free APA Citation Generator) ซึ่งทำให้เจาะจงเรื่องที่จะทำงานได้ง่าย
+เหมาะกับผู้เริ่มต้น และผู้เชี่ยวชาญ (มีฟีเจอร์ที่ต้องการใช้งานแยก เช่น Literature Review, Citation)
+ข้อจำกัด
+ไม่สามารถเข้าถึงบทความแบบเสียเงินได้หากไม่มี subscription
+บางสำนักพิมพ์ไม่อนุญาตให้แสดงเนื้อหาเต็ม
+การเข้าถึง full-text ขึ้นอยู่กับสถาบันที่สังกัด
+บทความบางเรื่องมีเพียง abstract หรือ preview
+ไม่มี config ในการขอ consent นำข้อมูลที่ user ใช้งานไป train ต่อ
+ไม่สามารถ Export Bibliography ได้ใน Free Version
+3.	จุดเด่นและข้อจำกัด
+
+
+ค้นหาและรวบรวมงานวิจัยล่าสุดมาให้
+ช่วยร่างเขียนรายงาน เอกสารวิชาการ แต่ไม่ 100%
+สร้าง Presentation
+รีวิวภาพโดยรวมของวรรณกรรมได้ดีขึ้น 
+ทำ Deep Research
+ระบุปีที่ตีพิมพ์ของบทความได้
+ใช้ Chatbot (AI) ที่ช่วยโต้ตอบกับบทความวิจัย
+https://www.thailibrary.in.th/2023/04/16/scispace/
+4.	แนวทางการประยุกต์ใข้งานจริง
+
+
+
+Paper Finder
+ https://paperfinder.allen.ai/chat
+Credit: ITM 68
+
+Paper Finder
+
+1. คุณสมบัติเด่นของเครื่องมือ
+ใช้ทำอะไรได้บ้าง:
+ค้นหางานวิจัยโดยใช้ Semantic Search ซึ่งเข้าใจความหมาย ไม่ใช่แค่ keyword
+แนะนำบทความที่เกี่ยวข้อง พร้อมเหตุผลว่าทำไมถึงเลือกแนะนำ
+เหมาะกับขั้นตอน:
+ช่วงต้นของการวิจัย: ตั้งคำถาม, หา literature เบื้องต้น, ระบุช่องว่าง (gap), วิเคราะห์เอกสาร/ ทำความ เข้าใจข้อมูล
+ความสามารถ AI เด่น:
+Natural Language Processing (NLP) สามารถตีความคำถามเป็นภาษาคน
+Knowledge Graph reasoning สามารถเชื่อมโยงบทความที่ซ่อนอยู่
+
+2. การใช้งาน
+วิธีเข้าถึง: paperfinder.allen.ai
+การสมัคร: ไม่บังคับ สามารถสมัครเพิ่มเติมเพื่อเก็บ history ได้
+รูปแบบการใช้งาน: คล้าย chatbot สามารถพิมพ์คำถามแล้วได้บทความ รวมถึงคำตอบที่ต้องการจากงานวิจัยนั้น ๆ
+ภาษา: ใช้ ภาษาอังกฤษ ได้ดีที่สุด (ภาษาไทย จะแปลเป็น ภาษาอังกฤษ แล้วนำไป Search ต่อ)
+ค่าใช้จ่าย: ใช้งานฟรี แต่บางวิจัยจะอยู่หลัง Paywall
+ประกอบด้วย 2 Feature หลัก สามารถค้นหา บทความได้ และสามารถสรุปบทความ หาความเหมือน/ หรือแตกต่างของบทความที่มีหัวเรื่องคล้ายกัน
+
+3. จุดเด่น / ข้อจำกัด
+จุดเด่น
+ค้นหาได้ตรงกว่า keyword search ทั่วไป
+เจองานที่ ซ่อนอยู่/เกี่ยวข้องเชิงบริบท
+มีเหตุผลอธิบายว่าทำไมเลือกแนะนำงานนั้น
+สามารถ Export Bib ได้ฟรี
+ข้อจำกัด
+ยังไม่ครอบคลุมฐานข้อมูลเชิงพาณิชย์ (Scopus / WoS)
+งานใหม่ ๆ บางชิ้นอาจยังไม่ถูก index
+ต้องตรวจสอบคุณภาพวารสารเอง (Impact Factor, Quartile)
+เหมาะกับ:
+ผู้เริ่มต้นทำวิจัย (หางานเบื้องต้น, ตั้งคำถาม)
+นักวิจัยมีประสบการณ์ (หา gap, หาแนวคิดใหม่)
+ ไม่ควรใช้เป็นแหล่งอ้างอิงสุดท้ายโดยไม่ตรวจสอบซ้ำ
+
+4. แนวทางการประยุกต์ใช้งานจริง
+แนวทางการประยุกต์ใช้งานจริง
+เหมาะกับบริบท:
+การเขียน literature review
+การทำ รายงาน / proposal / วิทยานิพนธ์
+ข้อเสนอแนะ:
+ใช้ถามคำถามเชิง gap เช่น “ข้อจำกัดของ AI ในการจัดการ supply chain มีอะไรบ้าง?”
+ใช้คู่กับ Google Scholar / Scopus เพื่อความครอบคลุมและคุณภาพ
+
+Elicit
+Credit: ITM 68
+
+
+
+คุณสมบัติเด่นของ Elicit
+การค้นหางานวิจัยแบบ Semantic Search
+ไม่จำเป็นต้องใส่ keyword ตรงตัว
+ใช้การจับความหมาย ทำให้เจองานที่เกี่ยวข้องแม้ใช้คำต่างกัน
+สรุปงานวิจัยอัตโนมัติ
+ดึงข้อมูลสำคัญ เช่น วิธีวิจัย ตัวแปร ผลการทดลอง
+ช่วยให้เข้าใจเนื้อหาได้ในเวลาอันสั้น
+ตารางเปรียบเทียบงานวิจัย
+Extract ข้อมูลจากหลาย Paper มาเรียงในรูปแบบตาราง
+เหมาะกับการวิเคราะห์เชิงเปรียบเทียบ
+ความสามารถ AI เด่น
+ทำหน้าที่คล้ายผู้ช่วยวิจัย (Research Assistant)
+ประหยัดเวลาในการอ่านบทความยาว ๆ
+สามารถ Export Bib ได้ฟรี
+
+
+จุดเด่น / ข้อจำกัด
+จุดเด่น
+ช่วยลดเวลาในการทำ Literature Review ได้มาก (จากหลายวันเหลือไม่กี่ชั่วโมง)
+เหมาะกับ นักเรียน นักศึกษา ป.ตรี–ป.เอก และ นักวิจัยมืออาชีพ
+สามารถปรับแต่งการดึงข้อมูลตามที่ต้องการ (Methods, Outcomes, Variables)
+ฐานข้อมูลใหญ่: เข้าถึงเอกสารงานวิจัยกว่า 125 ล้านฉบับ
+ข้อจำกัด
+ฐานข้อมูลหลักพึ่งพา Semantic Scholar → อาจไม่ครอบคลุมทุกงาน
+ไม่สามารถเข้าถึง บทความแบบปิด (subscription journals) ได้โดยตรง
+ผลลัพธ์การสรุปอาจผิดพลาดบ้าง ต้องตรวจสอบจากต้นฉบับเสมอ
+ภาษาไทยยังไม่สมบูรณ์ ต้องใช้ภาษาอังกฤษเป็นหลัก
+
+ข้อดีที่แตกต่างจากเครื่องมืออื่น
+เน้นการวิจัยในเชิงระบบ (Systematic Research Workflow)
+ช่วยจัดกระบวนการทบทวนวรรณกรรม (literature review) อย่างเป็นขั้นตอน
+รองรับ PICO framework (Population, Intervention, Comparison, Outcome) ใช้จริงในการสกัดสาระงานวิจัยโดยเฉพาะในสายการแพทย์/สังคมศาสตร์
+ดึงข้อมูลเชิงโครงสร้าง (Structured Data Extraction)
+สกัดข้อมูลเฉพาะจากงานวิจัย เช่น Sample size, วิธีการทดลอง, ตัวชี้วัดผล
+Citation-backed Answers
+ทุกคำตอบของ Elicit มีการอ้างอิงแหล่งที่มาแบบตรวจสอบได้ (Transparent sourcing)
+ลดปัญหา “Hallucination” ที่มักเจอเจอ AI อื่น ๆ เช่น ChatGPT เวลาตอบคำถามงานวิจัย
+ช่วยลดเวลาได้จริง
+มีการเคลมว่าสามารถ ลดเวลาทำ Systematic review ได้มากถึง 80%
+สามารถทำงานอย่าง screening และ summarizing ได้อัตโนมัติ
+ออกแบบมาเพื่องานวิจัย ไม่ใช่ General AI
+ถูกออกแบบมาโดยตรง เพื่อนักศึกษา อาจารย์ นักวิจัย
+Feature มีความเฉพาะทาง เช่น Compare papers, Extract methods, Organize results
+Workflow ที่โปร่งใส
+ผู้ใช้สามารถเห็นว่าข้อมูลมาจากไหน สามารถปรับปรุงและแก้ไขการสกัดข้อมูลเองได้
+เป็นการผสมระหว่าง AI และ Human เพื่อให้ผลลัพธ์น่าเชื่อถือและยืดหยุ่น
+
+Consensus AI
+Credit: ITM 68
+
+
+1. คุณสมบัติเด่นของเครื่องมือ
+ใช้ทำอะไรได้บ้าง?
+ใช้ในการค้นหางานวิจัยหรือข้อมูลเชิงวิชาการ 
+เด่นในด้านสุขภาพ-การแพทย์ 
+โดยใช้ AI สรุปผลลัพธ์จากบท ความวิชาการจำนวนมาก เพื่อตอบคำถามของผู้ใช้ได้ ทันที
+สามารถ Export Bib ได้ฟรี 
+
+เหมาะกับนักวิจัยในขั้นตอนไหน? 
+(ตั้งคำถาม, ทำเอกสาร, วิเคราะห์ ฯลฯ)
+เหมาะกับขั้นตอน "หาเอกสาร" (Literature Search) และ "วิเคราะห์" (Analysis) 
+สามารถค้นหาและสรุปงานวิจัยที่เกี่ยวข้องจากบทความวิชาการจำนวนมากได้อย่างรวดเร็ว 
+ประหยัดเวลาในการอ่านงานวิจัยทั้งหมด
+
+ความสามารถของ AI ที่โดดเด่นคืออะไร?
+
+ดึงข้อมูลจากฐานข้อมูลวิชาการหลายร้อยล้านฉบับ
+สรุปคำตอบพร้อมมีแหล่งอ้างอิง ผู้ใช้งานจะได้คำตอบที่อิงหลักฐาน พร้อมแหล่งที่มาให้ตรวจสอบได้
+แสดงระดับความเห็น “เห็นพ้อง” ของงานวิจัย ทำให้รู้ว่าประเด็นนั้นนักวิจัยส่วนใหญ่มี ผลลัพธ์ตรงกันหรือไม่
+
+2. การใช้งาน
+การสมัคร
+ต้องมี บัญชีฟรี จึงจะใช้งานฟีเจอร์พื้นฐานได้ (ค้นหา, อ่านผลการวิจัย) 
+
+ภาษาไทย
+คาดว่า interface เป็นภาษาอังกฤษ และผลสรุปก็น่าจะเป็นภาษาอังกฤษ (หากใช้ประโยคภาษาไทย อาจฟังก์ชัน translation ยังไม่สมบูรณ์) ซึ่งมีการรองรับภาษาอื่นในปี 2024 ยังอยู่ในช่วง early adoption
+ค่าใช้จ่าย:
+บัญชี Free: ใช้ฟีเจอร์พื้นฐานได้, มี AI credits ฟรี 20 ครั้งต่อเดือน (Synthesize 1 เครดิต / Copilot 2 เครดิต)
+หากต้องการใช้งานมากขึ้น ต้องสมัคร Pro ($29/เดือน), หรือ Team / Enterprise ตามแต่ละแพ็กเกจ
+Source:  The Effortless Academic Digital Software Labs
+UX/UI:
+หน้าเว็บใช้งานง่าย ด้านหน้าให้พิมพ์คำถามได้ทันที
+ผลลัพธ์ประกอบด้วย สรุป, Consensus Meter, รายงานในรูปแบบ CoPilot และลิงก์ไปยังเอกสารต้นฉบับ
+
+3. จุดเด่น / ข้อจำกัด
+จุดแข็ง
+รวดเร็วและเชื่อถือได้: สรุปผลจาก peer-review research ไม่ใช่แค่ผลจากเว็บทั่วไป
+สังเคราะห์เชิงปริมาณ: Consensus Meter ช่วยให้เห็นแนวโน้มความเห็นของงานวิจัย Feature เด่น  Synthesize (AI Summary), Apply Filter, Consensus Meter, Copilot, Ask Paper & Study Snapshot
+ใช้ง่าย: SLA พิมพ์คำถามแล้วได้ผลลัพธ์ชัดเจนในไม่กี่วินาที
+ครอบคลุมสาขาวิชา: แม้เน้นด้านการแพทย์-สุขภาพ แต่ครอบคลุมสังคมศาสตร์ วิทยาศาสตร์ทั่วไป ฯลฯ
+เชื่อมต่อกับฐานข้อมูล Pubmed, Semantic Scholar, OpenAlex and  Health related Research ส่วนใหญ่เกือบทั้งหมดคือ บทความภาษาอังกฤษ
+ข้อจำกัด
+ความไม่สม่ำเสมอ / Irreproducibility: อัลกอริธึม AI อาจให้ผลต่างไปในแต่ละครั้ง แม้คำถามเดียวกัน
+ขอบเขตเอกสารและฐานข้อมูล: แม้ครอบคลุมมาก แต่ยังอาจพลาดงานวิจัยเฉพาะทางหรือใหม่มากจะโดยเน้นไปทาง Health ถ้าเป็นสาขามนุษยศาสตร์/ภาษา อาจยังไม่ครอบคลุมเท่า STEM ไม่ได้ต่อฐานข้อมูล ภาษาไทย เช่น (เช่น ThaiJo, TDC) ซึ่ง Consensus ยังไม่ได้เชื่อมต่อ
+ฟีเจอร์จำกัดในฟรีเทียร์: AI credit จำกัดต่อเดือน
+ภาษาไทย: หากต้องการใช้งานภาษาไทย อาจไม่มีประสิทธิภาพเท่าอังกฤษ ความซับซ้อนของภาษาไทย ภาษาไทยไม่มี word boundaries (การเว้นวรรคระหว่างคำ)  ทำให้ NLP ต้องใช้ word segmentation ก่อน ซึ่งมีโอกาสผิดพลาดระบบ embedding / semantic search มักเทรนจาก corpus ภาษาอังกฤษ  embedding ของคำไทยไม่แม่นเท่า AI จึงสับสนได้ง่าย
+Consensus สรุปได้ เชิง descriptive (ภาพรวม, citation, consensus) แต่ไม่ได้ตีความเชิงวิพากษ์เหมือนนักวิจัยจริง Research gap ที่ได้จาก Consensus ยังต้องให้ นักวิจัยตรวจสอบและวิเคราะห์เอง
+ยังไม่มีแอปมือถือ (จากข้อมูลยังไม่มีข้อมูล mobile app) 
+Source:  Digital Software LabsEducraft,  The Effortless Academichelp.consensus.app
+
+4. แนวทางการประยุกต์ใช้งานจริง
+เหมาะกับการใช้ปรับปรุงให้ง่าย (รายงาน, งานวิจัย, การเรียน)
+Consensus AI เหมาะสำหรับนักเรียน นักศึกษา หรือนักวิจัย ในการช่วยหาข้อมูลสำหรับทำ รายงาน, งานวิจัย หรือวิทยานิพนธ์ เพื่อช่วยค้นหาและสรุปข้อมูลเบื้องต้น
+
+เมื่อเทียบกับเครื่องมือ AI ตัวอื่น (ที่คล้ายคลึงกัน) 
+Consensus AI มีจุดเด่นกว่า AI ทั่วไปตรงที่เน้นเรื่องความน่าเชื่อถือของข้อมูลด้านสุขภาพการแพทย์ เพราะดึงข้อมูลจากแหล่งวิชาการโดยตรงและแสดงที่มา ทำให้เหมาะสำหรับงานเชิงวิชาการมากกว่า AI ทั่วไปอย่าง ChatGPT
+
+Scopus AI
+Credit: ITM 68
+
+
+1.คุณสมบัติเด่นของเครื่องมือ
+Scopus AI ช่วยค้นหาเอกสารและสรุปสาระสำคัญ เป็นผู้ช่วยงานวิจัยอัจฉริยะที่ขับเคลื่อนด้วยฐานข้อมูล Scopus ของ Elsevier ใช้ปัญญาประดิษฐ์เพื่อช่วยให้นักวิจัย คณาจารย์ และนักศึกษา ค้นหาคำตอบที่น่าเชื่อถือและสรุปมาให้แล้วจากบทความที่ผ่านการตรวจสอบจากผู้ทรงคุณวุฒิ เพียงแค่ถามคำถามด้วยภาษาพูดตามปกติScopus AI จะให้คำตอบ พร้อม Link ของแหล่งอ้างอิงจากข้อมูลที่มีอยู่ในฐานข้อมูลของ Scopus
+
+
+
+
+ใช้ทำอะไรได้บ้าง?
+เหมาะกับนักวิจัยในขั้นตอนไหน? (ตั้งคำถาม, หาเอกสาร, วิเคราะห์ ฯลฯ)
+ความสามารถของ AI ที่โดดเด่นคืออะไร?
+
+1.คุณสมบัติเด่นของเครื่องมือ
+ตัวอย่างการสรุปข้อมูลของ Scopus AI
+
+1.คุณสมบัติเด่นของเครื่องมือ
+ตัวอย่างการให้แหล่งอ้างอิงของ Scopus AI
+
+3. จุดเด่น / ข้อจำกัด
+จุดเด่น:
+ใช้ฐานข้อมูลที่ ใหญ่และน่าเชื่อถือที่สุด แห่งหนึ่ง (ฐานข้อมูล Scopus peer-reviewed) 
+ความโปร่งใส โดยมีการระบุแหล่งอ้างอิงกำกับในทุกข้อสรุปเพื่อความน่าเชื่อถือ
+ช่วยลดระยะเวลาการทำ Literature Review ได้
+มีฟีเจอร์ Concept Maps(แสดงความสัมพันธ์ของ หัวข้อวิจัย, นักวิจัย, บทความ และ สาขาที่เกี่ยวข้อง) และ Deep Research (เป็นฟีเจอร์ใหม่ของ Scopus AI ที่ช่วยทำ รายงานเชิงสังเคราะห์ (Research Synthesis Report)
+ข้อจำกัด:
+แม้ว่าผู้ใช้งาน สามารถใช้ภาษาไทยในการสืบค้นข้อมูลได้ แต่ผลการค้นหาที่ได้จะเป็น งานวิจัยที่เผยแพร่ในภาษาอังกฤษเกือบทั้งหมด เนื่องจากฐานข้อมูล Scopus มีการจัดเก็บและจัดทำดัชนีข้อมูลในภาษาอังกฤษเป็นหลัก
+ต้องมี subscription ถึงจะสามารถเข้าถึงเนื้อหาฉบับเต็มของเอกสารได้โดยตรง
+ผู้ใช้งานค้นหาและเข้าถึงได้เฉพาะ บทคัดย่อ ชื่อเรื่อง และข้อมูลเมตา (Metadata) ของเอกสารเท่านั้น หากประสงค์จะอ่านฉบับเต็ม จำเป็นต้องอ้างอิงผ่านสำนักพิมพ์หรือฐานข้อมูลอื่นที่เชื่อมโยงกับ Scopus
+เหมาะกับใคร:
+นักวิจัยระดับปริญญาโท–เอก
+ผู้ที่มีพื้นฐานภาษาอังกฤษและเข้าถึงฐานข้อมูล Scopus ได้
+
+
+4. แนวทางการประยุกต์ใช้งานจริง
+บริบทที่เหมาะสม:
+การทำสารนิพนธ์และงานวิจัย (หา gap, แนวโน้ม, citation)
+การเขียนรายงานวิชาการ, รายงานความก้าวหน้าวิจัย
+ไอเดียเพิ่มเติม:
+ใช้ Deep Research สรุปภาพรวมก่อนเริ่มต้นเลือกหัวข้อ
+ใช้ Concept Maps สำหรับอธิบาย framework ในชั้นเรียนหรือการ present งาน
+
+
+
+5. แหล่งฐานข้อมูลงานวิจัยที่ใช้ในระบบ
+เครื่องมือดึงข้อมูลจากแหล่งใด? (เช่น Semantic Scholar, PubMed, arXiv, Scopus ฯลฯ)
+ฐานข้อมูล Scopus
+
+เป็นฐานข้อมูลแบบเปิด (open access) หรือเชิงพาณิชย์?
+เชิงพาณิชย์
+
+มีความน่าเชื่อถือหรืออัปเดตล่าสุดแค่ไหน
+มีความน่าเชื่อถือและข้อมูลเป็นปัจจุบัน
+Primary Sources
+Secondary Sources
+Tertiary Sources
+Libraries and Online Databases
+
+
+Google Scholar Labs
+Credit: ITM 68
+
+
+การทบทวนวรรณกรรมด้วย  AI
+
+Notebooklm 
+NotebookLM is a personal AI research and writing assistant developed by Google that is "grounded" in your own sources and documents. 
+Unlike a general AI chatbot, NotebookLM only uses the information you provide to generate summaries, answer questions, and create new content, which dramatically reduces the chances of it fabricating information (hallucinations). 
+
+การเรียนรู้บทความด้วย AI 
+สรุปบทความด้วย ChatGPT, NotebookLM
+ตอบคำถามด้วย ChatGPT, NotebookLM
+สร้างบทสนทนาด้วย AI, NotebookLM
+การสร้างตารางเปรียบเทียบ
+
+ตารางเปรียบเทียบ
+
+เทคนิคการร่าง Literature Review ด้วย AI
+
+การร่าง Literature Review ด้วย Notebook LM
+สร้างหัวข้อที่ควร  Review ด้วย ChatGPT
+สร้าง Prompt เพื่อไปใช้งานใน Notebook LM 
+สร้าง Draft ในประเด็นต่าง ๆ 
+
+
+
+การร่าง Literature Review ด้วย Mind Map
+ใช้ฟังก์ชัน Mind Map ใน NotebookLM สร้างความสัมพันธ์
+ให้ AI สร้างหัวข้อที่เราสนใจจาก Mind Map 
+นำข้อมูลที่ได้เป็น Literature Review 
+
+
+ตัวอย่าง Mind Map จาก NotebookLM
+
+Discuss Result from Mind Map
+
+ร่าง Literature Review ด้วย ChatGPT
+ใส่ข้อมูลจากการสรุป  Mind Map ของ NotebookLM
+สั่งให้เขียน  Literature Review 
+ตรวจสอบความถูกต้อง ปรับปรุง และหยอด Reference 
+
+การพัฒนาหัวข้อวิจัยด้วย AI
+ให้ข้อมูล Literature Review 
+ให้ ChatGPT แนะนำหัวข้อจากข้อมูล Literature Review 
+วิเคราะห์ GAP ในหัวข้อนี้
+“กรอบนโยบายสำหรับการบูรณาการ Generative AI อย่างมีจริยธรรมในมหาวิทยาลัย”
+“การเปรียบเทียบความเข้าใจและแรงจูงใจของผู้เรียนในการเรียนรู้เนื้อหาผ่าน AI กับการเรียนแบบดั้งเดิม”
+หัวข้อวิจัย
+
+Stage 3. 
+Research Design & Method Planning 
+
+การออกแบบการวิจัยด้วย Mindmap
+
+ร่าง Review ด้วย Mind map Technique
+
+ออกแบบวิธีวิจัย 
+จาก Literature Review และหัวข้อที่เราเลือกให้ AI ออกแบบวิธีวิจัยให้เรา 
+เลือกวิธีวิจัย 
+สามารถใช้ AI เพื่อสร้างเครื่องมือวิจัย 
+
+
+การออกแบบวิธีวิจัยด้วย AI 
+
+Prompt 1: ฉันเลือกหัวข้อนี้ “กรอบนโยบายสำหรับการบูรณาการ Generative AI อย่างมีจริยธรรมในมหาวิทยาลัย” ช่วยแนะนำวิธีวิจัยที่เหมาะสม
+
+
+Prompt 2: ฉันเลือกกระบวนการดังนี้ การวิเคราะห์เอกสาร (Document Analysis) ทำกรอบนโยบาย การจัดประชุมผู้เชี่ยวชาญ/กลุ่ม (Expert Review / Focus Group)
+
+
+Prompt 3: เขียนวัตถุประสงค์การวิจัย  และ Scope of Work เป็นภาษาอังกฤษ 
+
+
+
+การเรียนบทที่ 3 วิธีวิจัย
+Prompt : เขียน Methodology เป็น English เพื่อใส่ลงไปในรายงาน
+
+การออกแบบเครื่องมือด้วย AI 
+
+เก็บผลและวิเคราะห์ผล
+ดำเนินการเก็บผลตามวิธีมาตรฐาน ให้เวลาในการดำเนินการในส่วนนี้ อย่างมีคุณภาพ
+ตรวจสอบความถูกต้องของข้อมูล
+วิเคราะห์ผลด้วยเครื่องมือที่เราถนัด หรือสามารถใช้  AI ช่วยวิเคราะห์ได้ 
+
+คำสั่ง
+Prompt: Create the form for expert evaluate
+
+
+Prompt: สร้างแบบฟอร์มสำหรับการประเมินของ expert  
+
+Stage 4. 
+Data Work & 
+Analytical Reasoning
+
+การจำลองข้อมูลเบื้องต้น
+เพื่อการวิเคราะห์ผล
+
+คำสั่ง
+Prompt:  create the dummy result for the Expert Evaluation Form
+
+Prompt: สร้างข้อมูลจำลองสำหรับที่ได้จากแบบฟอร์ม Expert Evaluation 
+
+
+
+การวิเคราะห์ข้อมูลเบื้องต้น
+
+การเขียน Discussion 
+ใช้ข้อมูลให้ ai  ช่วงร่าง Discussion ได้
+ตรวจสอบความถูกต้อง
+เพิ่มเติม ลด ประเด็นที่ผู้วิจัยเห็นว่าสำคัญ และให้  ai ร่างให้ใหม่
+ตรวจสอบความถูกต้อง
+
+คำสั่ง
+Prompt:  from data Part 2: Evaluation (Likert Scale 1–5). What stat that we can product
+
+Prompt: จากตารางที่ 2 สถิติอะไรบ้างที่เราสามารถสร้างได้
+
+
+คำสั่ง
+Prompt:  Compute 1. Descriptive Statistics
+
+Prompt: คำนวณค่า Descriptive Statistics
+
+
+
+
+คำสั่ง
+Prompt 1:  จากตารางสร้าง เราควรสร้างเป็นกราฟหรือตารางดี
+
+Prompt 2: ทำกราฟ
+
+
+
+
+
+
+
+การเขียนผลการวิเคราะห์และอภิปรายผลด้วย AI 
+
+เขียน ส่วนที่เหลือ
+เขียน Discussion
+เขียน Conclusion 
+เขียน Introduction
+เขียน Abstract 
+ใส่ภาพและตารางที่เกี่ยวข้อง พร้อมอธิบายภาพและตาราง
+
+
+คำสั่ง
+Prompt :  Write the discussion from these results
+
+Prompt :  เขียนวิเคราะห์ผลจากข้อมูลที่ได้มานี้
+
+
+
+
+
+
+
+
+คำสั่ง
+Prompt : write the conclusion
+
+Prompt : เขียนสรุปผล
+
+
+
+
+
+
+
+
+
+
+Stage 5. 
+Scholarly Writing
+
+Issue/Topic
+Chapter 2
+Literature Review and Gap
+Chapter 3
+Methodology
+Chapter 4
+Result and Discussion
+ Chapter 5 
+Conclusion 
+ Chapter 1
+Introduction 
+ Abstract
+ Polishing
+
+การเขียน Introduction ด้วย AI 
+
+คำสั่ง
+Prompt :  write the introduction section
+
+
+
+
+
+
+
+
+การเขียน Abstract ด้วย AI
+
+คำสั่ง
+Prompt :  write the abstract
+
+
+
+
+
+
+
+
+
+
+การเขียน Academic Paper 
+
+Tools for Writing Academic Paper
+Microsoft Word 
+Latex
+
+Latex on Cloud
+Overleaf.com 
+Thai Book Template:  https://www.overleaf.com/latex/templates/thai-textbook-template/mkwbgmstzzzy
+
+
+
+
+Declaration of Using Generative AI
+
+Declaration of Generative AI
+
+Declaration of Generative AI
+
+จัดเรียงเนื้อหา
+
+จัดเรียงเนื้อหาตามโครงสร้างบทความ
+Abstract
+Introduction 
+Literature Review 
+Methodology
+Result and Discussion 
+Conclusion
+
+ทบทวน
+อ่านทวนความถูกต้อง
+ใส่ Reference 
+ทบทวนความถูกต้อง
+ทบทวนความถูกต้อง
+ทบทวนความถูกต้อง
+ตรวจสอบ format 
+
+
+Workshop
+Process for Draft Paper
+https://docs.google.com/document/d/1LcZ0yvRMhD9OpmqfU994J0wvbMfnR729nfRoS4gOyLA/edit?usp=sharing
+First Draft Paper
+https://docs.google.com/document/d/1YartzN_V0R63dGDHs2ii4ey9HUfLLzVH97AtkBYL1bE/edit?usp=sharing
+Sources  
+https://drive.google.com/drive/folders/1YIsBSy0NaMXlKBr0jWFdBlj7gLRgEZ_c?usp=share_link
+
+
+Biography
+Taweesak Samanchuen 
+ผู้ช่วยศาสตราจารย์ ดร.ทวีศักดิ์ สมานชื่น
+Assistant Professor Taweesak Samanchuen, Ph.D.
+https://itm.eg.mahidol.ac.th/personnel/taweesak-samanchuen/
+
+รองผู้อำนวยการฝ่ายดิจิทัลเทคโนโลยี  
+หอสมุดและคลังความรู้ มหาวิทยาลัยมหิดล (MULKC)
+
+อาจารย์ประจำกลุ่มสาขาวิชาเทคโนโลยีการจัดการระบบสารสนเทศ (ITM)
+
+หัวหน้าโครงการ
+โครงการหน่วยฝึกอบรมฐานสมรรถนะ (CBTU)
+
+Email : t.samanchuen@gmail.com Tel: 0814414906
