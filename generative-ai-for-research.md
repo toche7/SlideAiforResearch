@@ -30,7 +30,7 @@ Credit: ITM 68, MULKC | May 2026
 ## My Research Metrics *(SciVal)*
 <div class="center">
 
-![w:1000px](/fig/metrics.png)
+![w:1000px](fig/metrics.png)
 
 </div>
 
@@ -39,7 +39,7 @@ Credit: ITM 68, MULKC | May 2026
 ## Research Areas
 <div class="center">
 
-![w:950px](/fig/researcharea.png)
+![w:950px](fig/researcharea.png)
 
 </div>
 
@@ -49,7 +49,7 @@ Credit: ITM 68, MULKC | May 2026
 ## Journal Quartiles
 <div class="center">
 
-![w:950px](/fig/JournalQuartiles.png)
+![w:950px](fig/JournalQuartiles.png)
 
 </div>
 
@@ -75,7 +75,7 @@ Credit: ITM 68, MULKC | May 2026
 - 🤖 ค้นหาและสรุปบทความได้ภายในนาที
 - 💡 ช่วยระบุ Gap และตั้งคำถามวิจัย
 - 📝 ร่างและปรับปรุงงานเขียนเชิงวิชาการ
-- 📊 วิเคราะห์และสร้างภาพข้อมูล
+- 📊 วิเคราะห์และสร้างกราฟข้อมูล
 
 > **หลักการ**: AI ไม่ได้มาแทนนักวิจัย — แต่ช่วยให้ทำงานได้ **เร็วขึ้นและลึกขึ้น**
 
@@ -130,7 +130,7 @@ Large Language Models and their limitations
 
 <div class="center">
 
-![w:1000px](/fig/modernchatai.png)
+![w:1000px](fig/modernchatai.png)
 
 </div>
 
@@ -152,7 +152,7 @@ Large Language Models and their limitations
 
 <div class="center">
 
-![w:900px](/fig/pretrain.png)
+![w:900px](fig/pretrain.png)
 
 </div>
 
@@ -161,7 +161,7 @@ Large Language Models and their limitations
 
 <div class="center">
 
-![w:900px](/fig/finetune.png)
+![w:900px](fig/finetune.png)
 
 </div>
 
@@ -170,7 +170,7 @@ Large Language Models and their limitations
 
 <div class="center">
 
-![w:900px](/fig/predictnextword.png)
+![w:900px](fig/predictnextword.png)
 
 </div>
 
@@ -179,7 +179,7 @@ Large Language Models and their limitations
 
 <div class="center">
 
-![w:900px](/fig/context.png)
+![w:900px](fig/context.png)
 
 </div>
 
@@ -278,7 +278,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/researchProcessGeneral.png)
+![h:500px](fig/researchProcessGeneral.png)
 
 </div>
 
@@ -287,7 +287,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/researchProcessEngineering.png)
+![h:500px](fig/researchProcessEngineering.png)
 
 </div>
 
@@ -296,7 +296,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/researchProcessDataScience.png)
+![h:500px](fig/researchProcessDataScience.png)
 
 </div>
 
@@ -305,7 +305,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:400px](/fig/BasicResearchProcess.png)
+![h:400px](fig/BasicResearchProcess.png)
 
 </div>
 
@@ -326,7 +326,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![w:1100px](/fig/BasicPrincipleofUsingAI.png)
+![w:1100px](fig/BasicPrincipleofUsingAI.png)
 
 </div>
 
@@ -337,7 +337,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:420px](/fig/retractedPaper.png)
+![h:420px](fig/retractedPaper.png)
 
 </div>
 
@@ -358,7 +358,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/citationQuality.jpg)
+![h:500px](fig/citationQuality.jpg)
 
 </div>
 
@@ -369,7 +369,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/AIUsagePolicy.jpg)
+![h:500px](fig/AIUsagePolicy.jpg)
 
 </div>
 
@@ -392,7 +392,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/policy_usage.png)
+![h:500px](fig/policy_usage.png)
 
 </div>
 
@@ -401,7 +401,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/policy_Responsibility.png)
+![h:500px](fig/policy_Responsibility.png)
 
 </div>
 
@@ -410,7 +410,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/policy_Disclosure.png)
+![h:500px](fig/policy_Disclosure.png)
 
 </div>
 
@@ -419,7 +419,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/policy_Authorship.png)
+![h:500px](fig/policy_Authorship.png)
 
 </div>
 
@@ -428,7 +428,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/policy_image.png)
+![h:500px](fig/policy_image.png)
 
 </div>
 
@@ -473,7 +473,7 @@ Hybrid Intelligence Research Framework
 
 <div class="center">
 
-![h:500px](/fig/HIRF.png)
+![h:500px](fig/HIRF.png)
 
 </div>
 
@@ -494,7 +494,7 @@ Hybrid Intelligence Research Framework
 
 <div class="center">
 
-![h:500px](/fig/HIRFProcess.png)
+![h:500px](fig/HIRFProcess.png)
 
 </div>
 
@@ -503,7 +503,7 @@ Hybrid Intelligence Research Framework
 
 <div class="center">
 
-![h:500px](/fig/hirfProcessBlock.png)
+![h:500px](fig/hirfProcessBlock.png)
 
 </div>
 
@@ -512,7 +512,7 @@ Hybrid Intelligence Research Framework
 
 <div class="center">
 
-![h:500px](/fig/hirfWriting.png)
+![h:500px](fig/hirfWriting.png)
 
 </div>
 
@@ -535,7 +535,7 @@ section:not(.divider) h2 + * { margin-top: 260px; }
 
 <div class="center">
 
-![w:1000px](/fig/topicDev.png)
+![w:1000px](fig/topicDev.png)
 
 </div>
 
@@ -544,7 +544,7 @@ section:not(.divider) h2 + * { margin-top: 260px; }
 
 <div class="center">
 
-![w:700px](/fig/topicDevActual.png)
+![w:700px](fig/topicDevActual.png)
 
 </div>
 
@@ -825,6 +825,35 @@ Analytical Reasoning with AI
 </div>
 
 ---
+## ข้อพึงระวังในการวิเคราะห์ข้อมูลด้วย AI 
+
+<div class="columns">
+
+<div>
+
+**ด้านข้อมูล**
+- ❌ อย่าอัปโหลดข้อมูลส่วนบุคคลหรือข้อมูลลับขึ้น AI
+- ⚠️ ตรวจสอบว่า AI เข้าใจโครงสร้างข้อมูลถูกต้อง
+- ⚠️ Dummy Data ≠ ข้อมูลจริง — ผลอาจต่างกันมาก
+- ✅ ทำความสะอาดข้อมูลก่อนส่งให้ AI เสมอ
+
+</div>
+
+<div>
+
+**ด้านการตีความ**
+- ❌ อย่าเชื่อผลสถิติจาก AI โดยไม่ตรวจสอบ
+- ⚠️ AI อาจเลือกสถิติ **ไม่เหมาะสม** กับ distribution ของข้อมูล
+- ⚠️ กราฟ/ตารางจาก AI อาจมี **ข้อผิดพลาดแฝง**
+- ✅ **นักวิจัยต้องตีความและรับผิดชอบผล** เสมอ
+
+</div>
+
+</div>
+
+> **หลักการ**: AI ช่วย *ทำ* ได้เร็ว — แต่ **นักวิจัยต้องเข้าใจ** ว่าทำอะไรและเพราะอะไร
+
+---
 
 <!-- _class: divider -->
 
@@ -839,7 +868,7 @@ Academic Paper with AI
 
 <div class="center">
 
-![h:500px](/fig/hirfWritingR1.png)
+![h:500px](fig/hirfWritingR1.png)
 
 </div>
 
@@ -913,7 +942,7 @@ Academic Paper with AI
 ## Abstract
 <div class="center">
 
-![h:500px](/fig/imrad.png)
+![h:500px](fig/imrad.png)
 
 </div>
 
@@ -921,7 +950,7 @@ Academic Paper with AI
 ## Abstract Example
 <div class="center">
 
-![h:500px](/fig/exampleAbstract.png)
+![h:500px](fig/exampleAbstract.png)
 
 </div>
 
