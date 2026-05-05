@@ -305,7 +305,7 @@ Research Processes & Ethics
 
 <div class="center">
 
-![h:500px](/fig/BasicResearchProcess.png)
+![h:400px](/fig/BasicResearchProcess.png)
 
 </div>
 
@@ -331,6 +331,49 @@ Research Processes & Ethics
 </div>
 
 ---
+## ปริมาณเปเปอร์ที่ถูกถอน 
+
+<div class="columns">
+
+<div class="center">
+
+![h:420px](/fig/retractedPaper.png)
+
+</div>
+
+<div>
+
+- **Source**: Zhou et al. (2025), Prevalence and Trends in Global Retractions Explored Through a Topic Lens.
+- **Retracted papers** = จำนวนบทความที่ถูกถอน นับตามปีที่บทความถูกตีพิมพ์
+- **Retraction notices** = จำนวนประกาศถอนบทความ นับตามปีที่มีการออกประกาศถอน
+
+</div>
+
+</div>
+  
+
+
+---
+## ตัวอย่างปัญหาการใช้ AI : Citation Quality
+
+<div class="center">
+
+![h:500px](/fig/citationQuality.jpg)
+
+</div>
+
+
+
+---
+## นโยบายการใช้ AI ของแต่ละสำนักพิมพ์
+
+<div class="center">
+
+![h:500px](/fig/AIUsagePolicy.jpg)
+
+</div>
+
+---
 
 ## นโยบาย AI สำหรับผู้แต่งบทความ (Elsevier)
 
@@ -341,7 +384,53 @@ Research Processes & Ethics
 - ❌ ห้ามใส่ชื่อ AI เป็นผู้แต่งร่วม
 - ❌ ห้ามใช้ AI สร้าง/ดัดแปลงรูปภาพในบทความ
 
-[Link อ้างอิง](https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals)
+🔗 [Link อ้างอิง](https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals)
+
+
+---
+## 1. การใช้งาน
+
+<div class="center">
+
+![h:500px](/fig/policy_usage.png)
+
+</div>
+
+---
+## 2. ความรับผิดชอบ
+
+<div class="center">
+
+![h:500px](/fig/policy_Responsibility.png)
+
+</div>
+
+---
+## 3. การเปิดเผยข้อมูล
+
+<div class="center">
+
+![h:500px](/fig/policy_Disclosure.png)
+
+</div>
+
+---
+## 4. ความเป็นผู้แต่ง
+
+<div class="center">
+
+![h:500px](/fig/policy_Authorship.png)
+
+</div>
+
+---
+## 5. รูปภาพ
+
+<div class="center">
+
+![h:500px](/fig/policy_image.png)
+
+</div>
 
 ---
 
@@ -355,7 +444,7 @@ Research Processes & Ethics
 - ❌ ห้ามอัปโหลดบทความหรือจดหมายโต้ตอบลงใน AI
 - ❌ ห้ามใช้ AI ช่วยตัดสินรับ/ปฏิเสธบทความ
   
-[Link อ้างอิง](https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals)
+🔗 [Link อ้างอิง](https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals)
 
 ---
 
@@ -439,6 +528,10 @@ Define Research Topic & Research Focus
 
 ---
 ## Topic Development Process
+
+<style scoped>
+section:not(.divider) h2 + * { margin-top: 260px; }
+</style>
 
 <div class="center">
 
@@ -662,6 +755,8 @@ Method Planning with AI
 4. ให้ AI ช่วยออกแบบ **เครื่องมือวิจัย** (แบบสอบถาม, แบบประเมิน)
 5. เขียน Methodology เป็นภาษาอังกฤษ
 
+🔗 [Link เอกสารประกอบการอบรม](https://docs.google.com/document/d/1LcZ0yvRMhD9OpmqfU994J0wvbMfnR729nfRoS4gOyLA/edit?usp=sharing) 
+
 ---
 
 ## ตัวอย่าง Prompt สำหรับ Stage 3
@@ -738,23 +833,30 @@ Analytical Reasoning with AI
 
 Academic Paper with AI
 
+
+---
+## Writing Process
+
+<div class="center">
+
+![h:500px](/fig/hirfWritingR1.png)
+
+</div>
+
 ---
 
 ## ลำดับการเขียนบทความวิชาการ
 
-```
-ข้อมูล → บทที่ 4 (Result) → บทที่ 5 (Conclusion)
-      → บทที่ 1 (Introduction) → Abstract → Polishing
-```
 
-| ลำดับ | บท | เนื้อหา |
+| ลำดับ | บทที่ | เนื้อหา |
 |---|---|---|
-| 1 | Chapter 4 | Result and Discussion |
-| 2 | Chapter 5 | Conclusion |
-| 3 | Chapter 3 | Methodology |
-| 4 | Chapter 2 | Literature Review |
+| 1 | Chapter 2 | Literature Review |
+| 2 | Chapter 3 | Methodology |
+| 3 | Chapter 4 | Result and Discussion |
+| 4 | Chapter 5 | Conclusion |
 | 5 | Chapter 1 | Introduction |
-| 6 | — | Abstract & Polishing |
+| 6 | Abstract |
+|  7| Polishing |
 
 ---
 
@@ -780,6 +882,47 @@ Academic Paper with AI
 - LaTeX / Overleaf (overleaf.com)
 
 </div>
+</div>
+
+---
+## การเขียน Abstract ด้วย AI
+
+<div class="columns">
+
+<div>
+
+**โครงสร้าง Abstract (IMRaD)**
+1. **Background / Context** — ทำไมถึงทำวิจัย?
+2. **Objective** — วัตถุประสงค์คืออะไร?
+3. **Methods** — ใช้วิธีวิจัยอะไร?
+4. **Results** — ได้ผลลัพธ์อะไร?
+5. **Conclusion** — สรุปและความสำคัญคืออะไร?
+
+</div>
+
+<div>
+
+**Prompt สำหรับเขียน Abstract:**
+> *"Write an academic abstract (250 words) for my research titled '[ชื่อเรื่อง]'. Background: [บริบท]. Objective: [วัตถุประสงค์]. Methods: [วิธีวิจัย]. Results: [ผลลัพธ์สำคัญ]. Conclusion: [ข้อสรุปและความสำคัญ]."*
+
+</div>
+
+</div>
+
+---
+## Abstract
+<div class="center">
+
+![h:500px](/fig/imrad.png)
+
+</div>
+
+---
+## Abstract Example
+<div class="center">
+
+![h:500px](/fig/exampleAbstract.png)
+
 </div>
 
 ---
@@ -817,14 +960,21 @@ Human Intelligence Leads, AI Assists
 
 > **หลักการ**: มนุษย์ตัดสินใจ — AI ช่วยเสริมและเร่งกระบวนการ
 
+---
+## Workshop Data
+
+🔗 [Process for Draft Paper](https://docs.google.com/document/d/1LcZ0yvRMhD9OpmqfU994J0wvbMfnR729nfRoS4gOyLA/edit?usp=sharing)
+
+🔗 [First Draft Paper ](https://docs.google.com/document/d/1LcZ0yvRMhD9OpmqfU994J0wvbMfnR729nfRoS4gOyLA/edit?usp=sharing)
+
+🔗 [Sources](https://drive.google.com/drive/folders/1YIsBSy0NaMXlKBr0jWFdBlj7gLRgEZ_c?usp=share_link)
+
 
 ---
 
 ## วิทยากร
 
-<div class="columns">
 
-<div>
 
 **ผศ.ดร.ทวีศักดิ์ สมานชื่น**
 *Asst. Prof. Taweesak Samanchuen, Ph.D.*
@@ -837,15 +987,7 @@ Human Intelligence Leads, AI Assists
 ☎ 081-441-4906
 🔗 [itm.eg.mahidol.ac.th](https://itm.eg.mahidol.ac.th/personnel/taweesak-samanchuen/)
 
-</div>
 
-<div>
-
-![w:400px](/fig/googleScholar.png)
-
-</div>
-
-</div>
 
 ---
 
