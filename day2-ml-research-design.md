@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: mahidol
+theme: mahidol-green
 paginate: true
 size: 16:9
 footer: "From Research Questions to ML-based Research Design | AI for Research"

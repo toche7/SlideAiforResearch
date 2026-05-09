@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: mahidol-green
+theme: mahidol
 paginate: true
 size: 16:9
 footer: "Feynman AI — Open Source Research Agent | ITM, Mahidol University"
