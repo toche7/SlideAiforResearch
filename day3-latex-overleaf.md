@@ -28,20 +28,30 @@ footer: "LaTeX for Research & Proposal Workshop | AI for Research Day 3"
 
 ## ภาพรวม Day 3
 
-**ช่วงเช้า — LaTeX & Overleaf for Research Papers**
+<div class="columns">
+
+<div>
+
+**ช่วงเช้า — LaTeX & Overleaf**
 
 1. **Why LaTeX** — ทำไมนักวิจัยต้องรู้จัก LaTeX
 2. **Overleaf** — แพลตฟอร์มเขียน LaTeX บน Cloud
-3. **Document Structure** — โครงสร้างของ LaTeX document
+3. **Document Structure** — โครงสร้างของ LaTeX 
 4. **Writing Sections** — Abstract, Introduction, Methods, Results
 5. **Tables & Figures** — การใช้ตารางและรูปภาพ
 6. **Bibliography** — การจัดการ reference ด้วย BibTeX
+
+</div>
+<div>
 
 **ช่วงบ่าย — Workshop: Mini Proposal → Elsevier Paper**
 
 7. **Elsevier Template** — ใช้ template จริงของวารสาร
 8. **Mapping** — แปลง proposal เป็น paper sections
 9. **Workshop** — ลงมือเขียนด้วย AI + LaTeX
+</div>
+</div>
+
 
 ---
 
