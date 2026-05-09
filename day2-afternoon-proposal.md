@@ -3,16 +3,20 @@ marp: true
 theme: mahidol-green
 paginate: true
 size: 16:9
-footer: "AI for Research | Day 2 Afternoon — From ML Lab to Research Proposal"
+footer: "From ML Lab to Research Proposal | AI for Research"
 ---
 
 <!-- _class: lead -->
 
 <style scoped>
-img { position: absolute; top: 36px; right: 64px; width: 150px; height: 150px; object-fit: contain; }
+.logo-bar { position: absolute; top: 36px; right: 64px; display: flex; align-items: center; gap: 16px; }
+.logo-bar img { width: 100px; height: 100px; object-fit: contain; }
 </style>
 
-<img src="fig/logos/mahidol.svg" alt="Mahidol University">
+<div class="logo-bar">
+  <img src="fig/logos/mahidol.svg" alt="Mahidol University">
+  <img src="fig/logos/chulabhorn-circle.png" alt="BDI">
+</div>
 
 # From ML Lab to Research Proposal
 

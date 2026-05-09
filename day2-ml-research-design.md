@@ -3,25 +3,29 @@ marp: true
 theme: mahidol
 paginate: true
 size: 16:9
-footer: "From Research Questions to ML-based Research Design | ITM, Mahidol University"
+footer: "From Research Questions to ML-based Research Design | AI for Research"
 ---
 
 <!-- _class: lead -->
 
 <style scoped>
-img { position: absolute; top: 36px; right: 64px; width: 150px; height: 150px; object-fit: contain; }
+.logo-bar { position: absolute; top: 36px; right: 64px; display: flex; align-items: center; gap: 16px; }
+.logo-bar img { width: 100px; height: 100px; object-fit: contain; }
 </style>
 
-<img src="fig/logos/mahidol.svg" alt="Mahidol University">
+<div class="logo-bar">
+  <img src="fig/logos/mahidol.svg" alt="Mahidol University">
+  <img src="fig/logos/chulabhorn-circle.png" alt="BDI">
+</div>
 
 # From Research Questions to<br>Machine Learning-based<br>Research Design
 
-<div class="subtitle">Generative AI for Research — Day 2</div>
+<div class="subtitle">AI for Research — Day 2</div>
 
 **ผศ.ดร.ทวีศักดิ์ สมานชื่น**
-กลุ่มสาขาวิชา ITM | มหาวิทยาลัยมหิดล
+กลุ่มสาขาวิชา ITM | MULKC 
 
-ITM 68, MULKC | May 2026
+มหาวิทยาลัยมหิดล | May 2026
 
 ---
 
@@ -329,20 +333,7 @@ Research Conclusion
 
 <div class="center">
 
-```
-┌─────────────────────────────────────────────┐
-│  Artificial Intelligence (AI)                │
-│  ┌───────────────────────────────────────┐  │
-│  │  Machine Learning (ML)                │  │
-│  │  ┌─────────────────────────────────┐  │  │
-│  │  │  Deep Learning (Neural Network) │  │  │
-│  │  │  ┌─────────────────────────┐    │  │  │
-│  │  │  │  Generative AI (LLM)   │    │  │  │
-│  │  │  └─────────────────────────┘    │  │  │
-│  │  └─────────────────────────────────┘  │  │
-│  └───────────────────────────────────────┘  │
-└─────────────────────────────────────────────┘
-```
+![w:850px](fig/aicircle2.png)
 
 </div>
 
@@ -398,6 +389,14 @@ Research Conclusion
 
 ---
 
+<div class="center">
+
+![w:1050px](fig/supervised-regression.png)
+
+</div>
+
+---
+
 ## Supervised Learning — Regression
 
 <div class="columns">
@@ -437,7 +436,7 @@ $$\hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p$$
 - $\beta_1 \ldots \beta_p$ = coefficients (น้ำหนักของแต่ละ feature)
 - $x_1 \ldots x_p$ = feature values
 
-> ตีความได้ตรง: $\beta_j$ บอกว่า feature นั้นเพิ่มขึ้น 1 หน่วย → $\hat{y}$ เปลี่ยนเท่าไร
+> ตีความได้ง่าย $\beta_j$  → $\hat{y}$ เปลี่ยนเท่าไร
 
 </div>
 <div>
@@ -465,6 +464,8 @@ $$\hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p$$
 $$MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i|$$
 
 **ความหมาย:** ค่าเฉลี่ยของข้อผิดพลาดสัมบูรณ์ระหว่างค่าจริง ($y_i$) กับค่าที่ทำนาย ($\hat{y}_i$)
+<div class="columns">
+<div>
 
 | คุณสมบัติ | รายละเอียด |
 |---|---|
@@ -473,7 +474,11 @@ $$MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i|$$
 | **จุดเด่น** | ตีความง่าย ทนต่อ outlier |
 | **จุดอ่อน** | ไม่ลงโทษ error ขนาดใหญ่พิเศษ |
 
+</div>
+<div>
+
 > **ใช้เมื่อ:** ข้อมูลมี outlier มาก หรือต้องการ metric ที่ตีความในหน่วยเดียวกับ target
+<div>
 
 ---
 
@@ -483,6 +488,9 @@ $$RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$$
 
 **ความหมาย:** รากที่สองของค่าเฉลี่ยของ error ยกกำลังสอง — ลงโทษ error ขนาดใหญ่หนักกว่า MAE
 
+<div class="columns">
+<div>
+
 | คุณสมบัติ | รายละเอียด |
 |---|---|
 | **หน่วย** | เดียวกับ target |
@@ -490,7 +498,11 @@ $$RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$$
 | **จุดเด่น** | ไวต่อ error ขนาดใหญ่ (sensitive to outliers) |
 | **จุดอ่อน** | ถูก outlier ดึงค่าได้ง่าย |
 
+</div>
+<div>
+
 > **ใช้เมื่อ:** ความผิดพลาดขนาดใหญ่มีผลกระทบสูงในบริบทวิจัย เช่น ทำนายต้นทุนการรักษา
+</div>
 
 ---
 
@@ -516,7 +528,7 @@ $$R^2 = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y
 
 **จุดเด่น:** ไม่มีหน่วย เปรียบเทียบข้ามโมเดลได้ง่าย
 
-**จุดอ่อน:** ค่าสูงไม่ได้แปลว่าโมเดลดีเสมอ — อาจ overfit ได้
+**จุดอ่อน:** ค่าสูงไม่ได้แปลว่าโมเดลดีเสมอ  อาจ overfit ได้
 
 > **ใช้เมื่อ:** ต้องการรู้ว่าโมเดลอธิบาย **ความหลากหลาย** ของข้อมูลได้มากแค่ไหน
 
@@ -524,6 +536,14 @@ $$R^2 = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y
 </div>
 
 
+---
+
+
+<div class="center">
+
+![w:1050px](fig/supervised-classification.png)
+
+</div>
 
 ---
 
@@ -568,16 +588,12 @@ $$P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_p x_p)}}$$
 </div>
 <div>
 
-**โมเดล Classification ที่ใช้บ่อยในวิจัย:**
-
 | โมเดล | จุดเด่น | เหมาะกับ |
 |---|---|---|
 | **Logistic Regression** | ตีความ OR ได้ | binary, เชิงเส้น |
 | **Decision Tree** | เข้าใจง่าย เห็น rule | non-linear |
 | **Random Forest** | แม่นยำสูง | ข้อมูลซับซ้อน |
 | **XGBoost** | ประสิทธิภาพสูงมาก | class imbalance |
-| **SVM** | ทนต่อ noise | ข้อมูลมิติสูง |
-| **Naive Bayes** | เร็ว ข้อมูลน้อยได้ | text classification |
 
 > **เริ่มต้นด้วย Logistic Regression เสมอ** — ตีความ coefficient ได้เหมือน regression
 
@@ -590,10 +606,12 @@ $$P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_p x_p)}}$$
 
 $$Accuracy = \frac{TP + TN}{TP + TN + FP + FN}$$
 
-**ความหมาย:** สัดส่วนของการทำนายที่ถูกต้องทั้งหมด
+
 
 <div class="columns">
 <div>
+
+**ความหมาย:** สัดส่วนของการทำนายที่ถูกต้องทั้งหมด
 
 **Confusion Matrix:**
 
@@ -618,7 +636,7 @@ $$Accuracy = \frac{TP + TN}{TP + TN + FP + FN}$$
 
 ---
 
-## Classification Metric 2 — Precision & Recall
+## Classification Metric 2 — Precision & Recall (Sensitivity)
 
 <div class="columns">
 <div>
@@ -633,7 +651,7 @@ $$Precision = \frac{TP}{TP + FP}$$
 </div>
 <div>
 
-**Recall (Sensitivity)** — ความครบถ้วนในการจับ Positive
+**Recall** — ความครบถ้วนในการจับ Positive
 
 $$Recall = \frac{TP}{TP + FN}$$
 
@@ -651,10 +669,11 @@ $$Recall = \frac{TP}{TP + FN}$$
 
 $$F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$$
 
-**ความหมาย:** Harmonic mean ของ Precision และ Recall — สมดุลระหว่างสองตัว
 
 <div class="columns">
 <div>
+
+**ความหมาย:** Harmonic mean ของ Precision และ Recall — สมดุลระหว่างสองตัว
 
 | สถานการณ์ | Metric ที่เหมาะ |
 |---|---|
@@ -819,7 +838,269 @@ Research Conclusion    (ตอบ Research Question)
 - เชื่อมโยงผลที่เห็นกับ concept ที่เรียนมา
 
 **เปิด Notebook ได้ที่:**
-> 🔗 `bit.ly/ml-research-lab` *(Google Colab — ไม่ต้องติดตั้งอะไร)*
+> 🔗 [`https://colab.research.google.com`](https://colab.research.google.com) *(Google Colab — ไม่ต้องติดตั้งอะไร)*
+
+
+---
+## Introduction to Colab
+
+<div class="columns">
+
+<div>
+
+**Google Colab คืออะไร?**
+- Jupyter Notebook บนคลาวด์ของ Google
+- รัน Python ได้ทันที — ไม่ต้องติดตั้ง
+- มี GPU ฟรี (สำหรับงานที่ต้องการ)
+- บันทึกใน Google Drive อัตโนมัติ
+
+**เริ่มต้นใช้งาน:**
+> 1. เปิด 🔗 [Basic Concept of Google Colab](https://github.com/toche7/MLPython1Day/blob/main/BasicColab.ipynb)
+
+
+
+</div>
+
+<div>
+
+**หน้าตาของ Colab:**
+
+| ส่วนประกอบ | หน้าที่ |
+|---|---|
+| **Cell** | กล่องที่ใส่ code หรือข้อความ |
+| **▶ Run** | รัน cell นั้น |
+| **Shift+Enter** | รัน แล้วเลื่อนไป cell ถัดไป |
+| **Runtime** | เมนูรัน / restart ทั้งหมด |
+
+> **สำคัญ:** รัน cell ตามลำดับจากบนลงล่างเสมอ
+
+</div>
+
+</div>
+
+
+---
+
+<!-- _class: divider -->
+
+## 04.1
+## Python Lab — Regression
+
+ลองรัน ML จริงด้วย Python & Google Colab
+
+---
+
+## Data Set  
+
+**ตัวอย่างข้อมูลความพึงพอใจผู้รับบริการ (5 ราย)**
+
+| ผู้รับบริการ | เวลารอ (นาที) | คะแนน Staff (1–10) | ความพึงพอใจ (0–10) |
+|:---:|:---:|:---:|:---:|
+| คนที่ 1 | 10 | 9 | 8.5 |
+| คนที่ 2 | 30 | 6 | 5.0 |
+| คนที่ 3 | 5 | 10 | 9.5 |
+| คนที่ 4 | 45 | 5 | 4.0 |
+| คนที่ 5 | 20 | 8 | 7.0 |
+
+<div class="columns">
+<div>
+
+Features (x): เวลารอ,  คะแนนสอบ staff
+
+</div>
+<div>
+
+Target (y): ความพึงพอใจ
+
+</div>
+</div>
+
+---
+
+## Python Code
+
+<div class="columns">
+<div>
+
+**โจทย์:** ทำนายคะแนนความพึงพอใจผู้รับบริการ (0–10)
+
+```python
+df = pd.DataFrame(data)
+X = df[["waiting_time", "staff_score"]]
+y = df["satisfaction"]
+model = LinearRegression()
+model.fit(X, y)
+print("Coef:", model.coef_)   # น้ำหนักของแต่ละ feature
+print("R2 :", round(r2_score(y, model.predict(X)), 3))
+```
+
+</div>
+<div>
+
+**อ่านผล:**
+
+| ผลลัพธ์ | ความหมาย |
+|---|---|
+| `Coef[0]` ติดลบ | waiting นานขึ้น → คะแนนลด |
+| `Coef[1]` เป็นบวก | staff ดีขึ้น → คะแนนเพิ่ม |
+| **R²** ใกล้ 1 | โมเดลอธิบายข้อมูลได้ดี |
+| **MAE** ต่ำ | ทำนายคลาดเคลื่อนน้อย |
+
+
+
+</div>
+</div>
+
+> [Link Linear Regression](https://github.com/toche7/MLPython1Day/blob/main/BasicRegression.ipynb)
+
+---
+
+## Result — Regression Output
+
+<div class="columns">
+<div>
+
+![w:480px](fig/resultPredictVsActual.png)
+</div>
+<div>
+
+**ผลลัพธ์จากโมเดล:**
+
+```
+Coef: [-0.0009,  1.1036]
+R²  : 0.996
+```
+| Feature | Coef | ความหมาย |
+|---|---|---|
+| `waiting_time` | −0.0009 | รอเพิ่ม 1 นาที → คะแนนลดเล็กน้อย |
+| `staff_score` | +1.104 |  +1 คะแนน → satisfaction +1.1 |
+</div>
+</div>
+
+**R² = 0.996** → โมเดลอธิบายความแปรปรวนได้ **99.6%** — แม่นยำมากสำหรับข้อมูล 5 ราย (ข้อควรระวัง overfit)
+
+---
+
+<!-- _class: divider -->
+
+## 04.2
+## Python Lab — Classification
+
+ลองรัน ML จริงด้วย Python & Google Colab
+
+---
+
+## Dataset — ข้อมูลที่ใช้ใน Classification Lab
+
+**ตัวอย่างข้อมูลนักเรียน: ผ่าน/ไม่ผ่านการสอบ (6 คน)**
+
+| นักเรียน | ชั่วโมงอ่านหนังสือ | คะแนนเก่า (0–100) | ผ่านสอบ (1=ใช่, 0=ไม่) |
+|:---:|:---:|:---:|:---:|
+| คนที่ 1 | 1 | 40 | 0 |
+| คนที่ 2 | 2 | 55 | 0 |
+| คนที่ 3 | 3 | 60 | 1 |
+| คนที่ 4 | 4 | 70 | 1 |
+| คนที่ 5 | 5 | 80 | 1 |
+| คนที่ 6 | 1 | 50 | 0 |
+
+<div class="columns">
+<div>
+
+Features (x): ชั่วโมงที่อ่านหนังสือ,  คะแนนสอบเก่า
+
+</div>
+<div>
+
+Target (y): ผ่านสอบ (1) หรือไม่ผ่าน (0)
+
+</div>
+</div>
+
+---
+
+## Python Code — Classification
+
+<div class="columns">
+<div>
+
+
+
+```python
+df = pd.DataFrame(data)
+X = df[["hours_studied", "prev_score"]]
+y = df["passed"]
+model = LogisticRegression()
+model.fit(X, y)
+y_pred = model.predict(X)
+print(classification_report(y, y_pred,
+      target_names=["ไม่ผ่าน", "ผ่าน"]))
+```
+
+</div>
+<div>
+
+
+
+| Metric | ความหมาย |
+|---|---|
+| **Precision** | ทำนาย "ผ่าน" ถูกกี่ % |
+| **Recall** | จับผู้ที่ผ่านจริงได้กี่ % |
+| **F1-score** | สมดุล Precision + Recall |
+
+> ถ้าต้องการไม่พลาดคนที่จะไม่ผ่าน → เน้น **Recall** ของ class "ไม่ผ่าน"
+
+</div>
+</div>
+
+> [Link Logistic Regression](https://github.com/toche7/MLPython1Day/blob/main/BasicClassification.ipynb)
+
+
+---
+
+## Result — Classification Output
+
+<div class="columns">
+<div>
+
+**ผลลัพธ์ classification_report:**
+
+```
+              precision  recall  f1-score
+ไม่ผ่าน         1.00      1.00      1.00
+ผ่าน           1.00      1.00      1.00
+accuracy                          1.00
+```
+
+
+
+| Confusion Matrix| ทำนาย: ไม่ผ่าน | ทำนาย: ผ่าน |
+|---|:---:|:---:|
+| **จริง: ไม่ผ่าน** | 3 | 0 |
+| **จริง: ผ่าน** | 0 | 3 |
+
+</div>
+<div>
+
+**ตีความผล:**
+
+| ผลลัพธ์ | ความหมาย |
+|---|---|
+| Accuracy = 1.0 | ทำนายถูกทั้งหมด |
+| Recall (ผ่าน) = 1.0 | ไม่พลาดคนที่ควรผ่าน |
+| Precision (ไม่ผ่าน) = 1.0 | ไม่ติด false alarm |
+
+> ข้อควรระวัง: ข้อมูลน้อย (n=6) และ pattern ชัดมาก — accuracy สูงเพราะ overfit ไม่ใช่โมเดลดีจริง ต้องทดสอบกับข้อมูลใหม่
+
+</div>
+</div>
+
+---
+<!-- _class: divider -->
+
+## 04.3
+## Python Lab — Example for Research
+
+
 
 ---
 
@@ -835,13 +1116,14 @@ Research Conclusion    (ตอบ Research Question)
 | `length_of_stay` | วันนอนโรงพยาบาล | Feature / Target |
 | `readmission_30d` | กลับมารักษาซ้ำใน 30 วัน | Target (0/1) |
 
-> 500 rows × 10 columns — เล็กพอที่จะรันได้เร็ว เข้าใจง่าย
+> [Link Colab](https://github.com/toche7/MLPython1Day/blob/main/MLResearch.ipynb)
 
 ---
 
 ## Lab Part 1 — Explore the Data
+<div class="columns">
+<div>
 
-**เปิด Cell 1–3 แล้วรัน:**
 
 ```python
 import pandas as pd
@@ -853,38 +1135,25 @@ df.describe()
 df["readmission_30d"].value_counts()
 ```
 
+</div>
+<div>
+
 **สังเกต:**
 - มีกี่ rows / columns?
 - target มี class imbalance ไหม?
 - column ใดมีค่าหาย (NaN)?
 
----
+> อ้างอิง Code จากใน Colab เป็นหลัก
 
-## Lab Part 2 — Classification
-
-**รัน Cell 4–6: Logistic Regression**
-
-```python
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report
-
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-y_pred = model.predict(X_test)
-print(classification_report(y_test, y_pred))
-```
-
-**อ่านผล:**
-- `precision` — เมื่อทำนาย Positive ถูกแค่ไหน
-- `recall` — จับ Positive จริงได้มากแค่ไหน
-- `f1-score` — สมดุลระหว่างสองตัวข้างต้น
+<div>
 
 ---
 
-## Lab Part 3 — Regression
+## Lab Part 2 — Regression
+<div class="columns">
+<div>
 
-**รัน Cell 7–9: ทำนาย Length of Stay**
+
 
 ```python
 from sklearn.ensemble import RandomForestRegressor
@@ -898,31 +1167,47 @@ print("MAE:", mean_absolute_error(y_test, y_pred))
 print("R²:", r2_score(y_test, y_pred))
 ```
 
+</div>
+<div>
+
 **อ่านผล:**
 - `MAE` — โมเดลผิดพลาดเฉลี่ยกี่วัน?
 - `R²` — โมเดลอธิบายความแปรปรวนได้กี่ %?
 
+> อ้างอิง Code จากใน Colab เป็นหลัก
+</div>
+
+
 ---
 
-## Lab Part 4 — Clustering
+## Lab Part 3 — Classification
 
-**รัน Cell 10–12: K-Means Patient Segmentation**
+<div class="columns">
+<div>
+
 
 ```python
-from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
 
-kmeans = KMeans(n_clusters=3, random_state=42)
-df["cluster"] = kmeans.fit_predict(X_scaled)
+model = LogisticRegression()
+model.fit(X_train, y_train)
 
-# ดู cluster profiles
-df.groupby("cluster").mean().round(2)
+y_pred = model.predict(X_test)
+print(classification_report(y_test, y_pred))
 ```
 
-**สังเกต:**
-- แต่ละ cluster มีลักษณะอย่างไร?
-- cluster ใดน่าจะเป็นกลุ่มเสี่ยงสูง?
-- ตั้งชื่อ cluster ได้ไหม?
+</div>
+<div>
+
+**อ่านผล:**
+- `precision` — เมื่อทำนาย Positive ถูกแค่ไหน
+- `recall` — จับ Positive จริงได้มากแค่ไหน
+- `f1-score` — สมดุลระหว่างสองตัวข้างต้น
+
+> อ้างอิง Code จากใน Colab เป็นหลัก
+</div>
+
 
 ---
 
@@ -1089,9 +1374,66 @@ Research Question to ML-based Analysis Plan
 
 ---
 
+## **Dataset 1 — Patient Readmission** 
+ข้อมูลผู้ป่วยโรงพยาบาล 500 ราย
+
+| Column | ประเภท |
+|---|---|
+| อายุ | Feature |
+| เพศ  | Feature |
+| โรคหลัก | Feature |
+| จำนวนโรคร่วม | Feature |
+| วันนอนครั้งที่แล้ว | Feature |
+| กลับมาใน 30 วัน (0/1) | **Target** |
+> [Link Dataset](https://raw.githubusercontent.com/toche7/DataSets/refs/heads/main/PatientReadmission.csv)
+
+---
+
+## **Dataset 2 — Nurse Workload & Burnout** 
+แบบสอบถามพยาบาล 200 คน
+
+| Column | ประเภท |
+|---|---|
+| ชั่วโมงทำงาน/สัปดาห์ | Feature |
+| จำนวนผู้ป่วยดูแล | Feature |
+| การสนับสนุนจากองค์กร | Feature |
+| คะแนน Burnout (0–100) | **Target** |
+
+> [Link Dataset](https://raw.githubusercontent.com/toche7/DataSets/refs/heads/main/nursesBurnout.csv)
+
+---
+## **Dataset 3 — Health Screening Survey**
+
+ผลตรวจสุขภาพประจำปี 300 ราย
+
+| Column | ประเภท |
+|---|---|
+| BMI  | Feature |
+| น้ำตาล | Feature |
+|  ความดัน | Feature |
+| การออกกำลังกาย | Feature |
+| ประวัติครอบครัว | Feature |
+| กลุ่มเสี่ยงโรค (สูง/กลาง/ต่ำ) | **Target** |
+> [Link Dataset](https://raw.githubusercontent.com/toche7/DataSets/refs/heads/main/healthSurveyData.csv)
+
+---
+## **Dataset 4 — Patient Satisfaction Survey**
+แบบสอบถาม open-ended 300 ชุด
+
+| Column | ประเภท |
+|---|---|
+| ความคิดเห็นการรักษา | Feature (text) |
+| ความคิดเห็นบริการ | Feature (text) |
+| ข้อเสนอแนะ | Feature (text) |
+| Theme / Sentiment | **Target** |
+
+> [Link Dataset](https://raw.githubusercontent.com/toche7/DataSets/refs/heads/main/patientSatisfaction.csv)
+
+---
+
 ## Activity A — Research Question to ML Project
 
-**กรอกข้อมูลของท่าน:**
+**เลือก 1 dataset จากหน้าก่อน หรือใช้ข้อมูลของท่านเอง แล้วกรอก:**
 
 | Component | Your Project |
 |---|---|
@@ -1101,7 +1443,7 @@ Research Question to ML-based Analysis Plan
 | **Data Science Objective** | |
 | **ML Task** | Classification / Regression / Clustering / NLP |
 
-> *เริ่มจาก topic ที่ท่านสนใจ หรือ dataset ที่มีอยู่แล้ว*
+> *เริ่มจาก dataset ที่เลือก แล้วถามตัวเองว่า "เราต้องการรู้อะไรจากข้อมูลนี้?"*
 
 ---
 
@@ -1111,7 +1453,7 @@ Research Question to ML-based Analysis Plan
 
 | Target Variable | Feature 1 | Feature 2 | Feature 3 | Feature 4 | Feature 5 |
 |---|---|---|---|---|---|
-| | | | | | |
+|Y: | | | | | |
 
 **คำถามประกอบ:**
 - Target ของท่านเป็นตัวเลขหรือกลุ่ม?
@@ -1156,12 +1498,8 @@ Research Question to ML-based Analysis Plan
 ## Prompt Template สำหรับขอความช่วยเหลือจาก AI
 
 ```text
-I am designing a research project on [topic].
-
-My research question is: [research question]
-
-Please help me convert it into a machine learning-based 
-analysis plan. Include:
+I am designing a research project on [topic]. My research question is: [research question]
+Please help me convert it into a machine learning-based analysis plan. Include:
 - Data science objective
 - ML task (classification/regression/clustering/NLP)
 - Target variable
@@ -1214,6 +1552,9 @@ analysis plan. Include:
 
 ## Checklist ก่อนพักเที่ยง
 
+<div class="columns">
+<div>
+
 ตรวจสอบว่าท่านมีครบก่อนออกไปทานข้าว:
 
 - ☐ Research Topic ที่ชัดเจน
@@ -1224,5 +1565,10 @@ analysis plan. Include:
 - ☐ Features (อย่างน้อย 3–5 ตัว)
 - ☐ Evaluation Metrics
 - ☐ Draft ML-based Analysis Plan (Canvas)
+</div>
+<div>
 
 > ถ้ายังไม่ครบ — ใช้เวลาพักสั้น ๆ คุยกับวิทยากรก่อนช่วงบ่าย
+
+</div>
+</div>
