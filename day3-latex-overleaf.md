@@ -22,7 +22,9 @@ footer: "LaTeX for Research & Proposal Workshop | AI for Research Day 3"
 
 <div class="subtitle">Day 3 — Morning & Afternoon Session</div>
 
-**จาก Mini Proposal สู่ Academic Paper ด้วย LaTeX & Overleaf**
+**ผศ.ดร.ทวีศักดิ์ สมานชื่น**
+CBTU | ITM | คณะวิศวกรรมศาสตร์| มหาวิทยาลัยมหิดล
+May 2026
 
 ---
 
@@ -288,9 +290,9 @@ LaTeX บน Cloud — ไม่ต้องติดตั้ง
 ```
 
 ---
-
-## Elsevier Template — Frontmatter
 <!-- _class: dense -->
+## Elsevier Template — Frontmatter
+
 ```latex
 \begin{frontmatter}
 \title{Predicting 30-Day Hospital Readmission Using Machine Learning: A Retrospective Study}
@@ -1483,19 +1485,33 @@ the content of the publication.
 
 > ✅ Paper ที่สร้างใน workshop นี้คือ **draft จุดเริ่มต้น** ยังต้องผ่านกระบวนการวิจัยและตรวจสอบอีกพอสมควร
 
+
+---
+
+## วิทยากร
+
+
+**ผศ.ดร.ทวีศักดิ์ สมานชื่น**
+*Asst. Prof. Taweesak Samanchuen, Ph.D.*
+
+- รองผู้อำนวยการฝ่ายดิจิทัลเทคโนโลยี **MULKC**
+- อาจารย์ประจำสาขา **ITM** คณะวิศวกรรมศาสตร์ มหาวิทยาลัยมหิดล
+- หัวหน้าโครงการ **CBTU** 
+
+🔗 [Profile](https://itm.eg.mahidol.ac.th/personnel/taweesak-samanchuen/)  
+📧 t.samanchuen@gmail.com
+☎ 081-441-4906
+
+websit: [cbtumu.net](https://cbtumu.net) | facebook: [cbtumu](https://www.facebook.com/CBTUMU/)
+
 ---
 
 <!-- _class: lead -->
 
 # ขอบคุณ
-
+ทวีศักดิ์ สมานชื่น
 **AI for Research — Day 3**
 
-*LaTeX for Research Papers & Proposal 
-Workshop*
-
-จาก Workshop สู่การตีพิมพ์จริง:
-**Human judgment + AI assistance + LaTeX quality**
 
 
 

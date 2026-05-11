@@ -23,9 +23,9 @@ footer: "From Research Questions to ML-based Research Design | AI for Research"
 <div class="subtitle">AI for Research — Day 2</div>
 
 **ผศ.ดร.ทวีศักดิ์ สมานชื่น**
-กลุ่มสาขาวิชา ITM | MULKC 
+CBTU | ITM | คณะวิศวกรรมศาสตร์| มหาวิทยาลัยมหิดล
 
-มหาวิทยาลัยมหิดล | May 2026
+May 2026
 
 ---
 
@@ -883,7 +883,7 @@ Research Conclusion    (ตอบ Research Question)
 
 <!-- _class: divider -->
 
-## 04.1
+## Lab 1
 ## Python Lab — Regression
 
 ลองรัน ML จริงด้วย Python & Google Colab
@@ -983,7 +983,7 @@ R²  : 0.996
 
 <!-- _class: divider -->
 
-## 04.2
+## Lab 2
 ## Python Lab — Classification
 
 ลองรัน ML จริงด้วย Python & Google Colab
@@ -1097,7 +1097,7 @@ accuracy                          1.00
 ---
 <!-- _class: divider -->
 
-## 04.3
+## Lab 3
 ## Python Lab — Example for Research
 
 

@@ -19,12 +19,12 @@ img { position: absolute; top: 36px; right: 64px; width: 150px; height: 150px; o
 <div class="subtitle">Generative AI for Research</div>
 
 **ผศ.ดร.ทวีศักดิ์ สมานชื่น**
-กลุ่มสาขาวิชา ITM | มหาวิทยาลัยมหิดล
+CBTU | ITM | คณะวิศวกรรมศาสตร์| มหาวิทยาลัยมหิดล
 
-Credit: ITM 68, MULKC | May 2026
+May 2026
 
 
-
+<!-- 
 ---
 
 ## My Research Metrics *(SciVal)*
@@ -52,8 +52,9 @@ Credit: ITM 68, MULKC | May 2026
 ![w:950px](fig/JournalQuartiles.png)
 
 </div>
+-->
 
----
+--- 
 
 ## ทำไมต้องใช้ AI ในการวิจัย?
 
@@ -1004,18 +1005,18 @@ Human Intelligence Leads, AI Assists
 ## วิทยากร
 
 
-
 **ผศ.ดร.ทวีศักดิ์ สมานชื่น**
 *Asst. Prof. Taweesak Samanchuen, Ph.D.*
 
 - รองผู้อำนวยการฝ่ายดิจิทัลเทคโนโลยี **MULKC**
 - อาจารย์ประจำสาขา **ITM** คณะวิศวกรรมศาสตร์ มหาวิทยาลัยมหิดล
-- หัวหน้าโครงการ **CBTU**
+- หัวหน้าโครงการ **CBTU** 
 
+🔗 [Profile](https://itm.eg.mahidol.ac.th/personnel/taweesak-samanchuen/)  
 📧 t.samanchuen@gmail.com
 ☎ 081-441-4906
-🔗 [itm.eg.mahidol.ac.th](https://itm.eg.mahidol.ac.th/personnel/taweesak-samanchuen/)
 
+websit: [cbtumu.net](https://cbtumu.net) | facebook: [cbtumu](https://www.facebook.com/CBTUMU/)
 
 
 ---

@@ -22,7 +22,9 @@ footer: "From ML Lab to Research Proposal | AI for Research"
 
 <div class="subtitle">Day 2 Afternoon Session</div>
 
-**จาก ML Analysis Plan สู่ Mini Research Proposal**
+**ผศ.ดร.ทวีศักดิ์ สมานชื่น**
+CBTU | ITM | คณะวิศวกรรมศาสตร์| มหาวิทยาลัยมหิดล
+May 2026
 
 ---
 
@@ -239,7 +241,7 @@ From ML Workflow to Proposal Development
 10. Limitations
 
 ---
-
+<!-- _class: dense -->
 ## Flow ของ Mini Proposal
 
 ```
@@ -287,7 +289,7 @@ Objectives → Methodology → AI/ML Analysis
 > ✅ Background ที่ดีต้องมี **การทบทวนวรรณกรรม** เป็นฐานรองรับ — ไม่ใช่แค่ความเห็นส่วนตัว
 
 ---
-
+<!-- _class: dense -->
 ## Background ต้องมี Literature Review ด้วย
 
 **ทำไม Background ถึงต้องอ้างอิงงานวิจัย?**
@@ -305,7 +307,7 @@ Objectives → Methodology → AI/ML Analysis
 - ระบุปี ผู้แต่ง และแหล่งที่มา
 
 ---
-
+<!-- _class: dense -->
 ## วิธีหาเปเปอร์สำหรับ Background
 
 **แหล่งค้นหาที่แนะนำ:**
@@ -720,7 +722,7 @@ Designing a Rigorous ML-based Research Method
 > Potential limitations include **[limitations]**.
 
 ---
-
+<!-- _class: dense -->
 ## ตัวอย่าง Methodology — Dataset 1: Patient Readmission
 
 > *"This study will develop a **binary classification model** to predict 30-day hospital readmission. The dataset includes 500 patient records with features such as age, gender, primary diagnosis, number of comorbidities, and length of previous stay. Candidate models include Logistic Regression and Random Forest. Model performance will be evaluated using **Recall and F1-score**, prioritizing sensitivity for high-risk patients. Potential limitations include class imbalance and limited generalizability to other hospital settings."*
@@ -733,7 +735,7 @@ Designing a Rigorous ML-based Research Method
 | Main Limitation | Class imbalance, generalizability |
 
 ---
-
+<!-- _class: dense -->
 ## ตัวอย่าง Methodology — Dataset 2: Nurse Burnout
 
 > *"This study will apply a **regression model** to predict nurse burnout scores based on workload indicators. The dataset includes 200 nursing staff records with features including weekly working hours, number of patients managed, and organizational support scores. Candidate models include Linear Regression and Random Forest Regressor. Model performance will be evaluated using **MAE and R²**. Potential limitations include self-reported bias and small sample size."*
@@ -746,7 +748,7 @@ Designing a Rigorous ML-based Research Method
 | Main Limitation | Self-report bias, n=200 |
 
 ---
-
+<!-- _class: dense -->
 ## ตัวอย่าง Methodology — Dataset 3: Health Screening
 
 > *"This study will develop a **multi-class classification model** to identify disease risk levels (High/Medium/Low) from annual health screening data. The dataset includes 300 records with features such as BMI, fasting glucose, blood pressure, exercise behavior, and family history. Candidate models include Decision Tree and Random Forest. Model performance will be evaluated using **Accuracy and macro F1-score**. Potential limitations include self-reported lifestyle data and cross-sectional design."*
@@ -759,7 +761,7 @@ Designing a Rigorous ML-based Research Method
 | Main Limitation | Self-reported lifestyle data |
 
 ---
-
+<!-- _class: dense -->
 ## ตัวอย่าง Methodology — Dataset 4: Patient Satisfaction
 
 > *"This study will apply **NLP and topic modeling** to analyze open-ended patient satisfaction survey responses. The dataset includes 300 survey records with free-text feedback on treatment, service, and suggestions. LDA topic modeling and sentiment analysis will be used to extract themes and sentiment direction. Evaluation will use **topic coherence scores and human validation**. Potential limitations include language variation and subjective interpretation of themes."*
@@ -884,7 +886,7 @@ Mini Research Proposal Development
 | Ethics / Limitation | |
 
 ---
-
+<!-- _class: dense -->
 ## Prompt สำหรับร่าง Proposal
 
 ```
@@ -1059,3 +1061,29 @@ Reflecting on AI-Assisted Proposal Writing
 3. **Reflection Canvas** — ประเมินกระบวนการ AI-assisted
 4. **Workflow ที่จะนำไปปรับใช้** — จากการแลกเปลี่ยนกลุ่ม
 5. **แผนตรวจสอบ Proposal** — สำหรับนำไปพัฒนาต่อ
+
+---
+
+## วิทยากร
+
+
+**ผศ.ดร.ทวีศักดิ์ สมานชื่น**
+*Asst. Prof. Taweesak Samanchuen, Ph.D.*
+
+- รองผู้อำนวยการฝ่ายดิจิทัลเทคโนโลยี **MULKC**
+- อาจารย์ประจำสาขา **ITM** คณะวิศวกรรมศาสตร์ มหาวิทยาลัยมหิดล
+- หัวหน้าโครงการ **CBTU** 
+
+🔗 [Profile](https://itm.eg.mahidol.ac.th/personnel/taweesak-samanchuen/)  
+📧 t.samanchuen@gmail.com
+☎ 081-441-4906
+
+websit: [cbtumu.net](https://cbtumu.net) | facebook: [cbtumu](https://www.facebook.com/CBTUMU/)
+
+
+---
+<!-- _class: lead -->
+
+# ขอบคุณ
+ทวีศักดิ์ สมานชื่น
+**AI for Research — Day 2**
