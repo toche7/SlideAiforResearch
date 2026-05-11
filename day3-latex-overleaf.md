@@ -56,11 +56,21 @@ footer: "LaTeX for Research & Proposal Workshop | AI for Research Day 3"
 ---
 
 <!-- _class: divider -->
+<div class="columns">
+<div>
 
 ## 01
 ## Why LaTeX?
 
 The Standard for Academic Publishing
+
+</div>
+<div>
+
+![w:550px](fig/logos/LaTeX_logo.png)
+
+</div>
+</div>
 
 ---
 
@@ -116,11 +126,22 @@ The Standard for Academic Publishing
 ---
 
 <!-- _class: divider -->
+<div class="columns">
+<div>
 
 ## 02
 ## Overleaf
 
 LaTeX บน Cloud — ไม่ต้องติดตั้ง
+
+
+</div>
+<div>
+
+![w:650px](fig/logos/Overleaf.png)
+
+</div>
+</div>
 
 ---
 
@@ -180,6 +201,7 @@ LaTeX บน Cloud — ไม่ต้องติดตั้ง
 
 </div>
 
+
 ---
 
 ## เปิด Elsevier Template ใน Overleaf
@@ -205,6 +227,39 @@ LaTeX บน Cloud — ไม่ต้องติดตั้ง
 ## LaTeX Document Structure
 
 ทำความเข้าใจโครงสร้างเอกสาร
+
+---
+<!-- _class: dense -->
+
+## TestProject 
+<div class="columns">
+<div>
+
+```
+\documentclass{article}
+\usepackage{graphicx} % for inserting images
+
+\title{ProjectName}
+\author{YourName }
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\end{document}
+```
+</div>
+<div>
+
+<div class="img-edge-wrap">
+<img src="fig/LatexSample1.png" width="600" class="img-edge">
+</div>
+
+</div>
+</div>
 
 ---
 
@@ -322,6 +377,13 @@ for early intervention.
 ```
 
 ---
+## LaTeX Output: Abstract 
+
+<div class="img-edge-wrap">
+<img src="fig/LatexAbstract.png" width="700" class="img-edge">
+</div>
+
+---
 
 ## Introduction — CARS Model
 
@@ -359,7 +421,14 @@ hospital settings.
 
 ```
 
+---
+## LaTeX Output: Introduction 
 
+<div class="img-edge-wrap">
+<img src="fig/LatexIntro.png" width="700" class="img-edge">
+</div>
+
+เครื่องหมาย ? เกิดขึ้นเนื่องจากเรายังไม่ได้ทำการจัดการเรื่อง citation ให้สมบูรณ์ ซึ่งจะได้กล่าวต่อไป 
 
 ---
 
@@ -402,6 +471,14 @@ one-hot encoding.
 ```
 
 ---
+## LaTeX Output: Methods 
+
+<div class="img-edge-wrap">
+<img src="fig/LatexMethod.png" width="700" class="img-edge">
+</div>
+
+
+---
 
 <!-- _class: divider -->
 
@@ -431,7 +508,34 @@ one-hot encoding.
   \end{tabular}
 \end{table}
 ```
+---
+## LaTeX Output: Table 
 
+<div class="img-edge-wrap">
+<img src="fig/LatexTable.png" width="700" class="img-edge">
+</div>
+
+
+---
+<!-- _class: dense -->
+## การสร้าง LaTeX Tables ด้วย AI
+
+**Prompt สำหรับขอ AI สร้าง Table:**
+
+```
+Create a LaTeX table for an Elsevier journal paper (booktabs style).
+Show the following data as a 3-column comparison table:
+
+Variable        | Readmitted (n=113) | Not Readmitted (n=387)
+Age, mean (SD)  | 65.2 (12.4)        | 58.7 (14.1)
+Female, n (%)   | 48 (42.5%)         | 183 (47.2%)
+Comorbidities≥2 | 83 (73.5%)         | 201 (51.8%)
+LOS, days       | 7.3 (3.8)          | 4.9 (2.6)
+
+Use \toprule, \midrule, \bottomrule. Add \caption and \label.
+```
+
+> ✅ **เครื่องมือช่วยสร้าง Table:** [tablesgenerator.com](https://tablesgenerator.com) — วาดตารางแล้ว Export เป็น LaTeX ทันที
 
 ---
 
@@ -456,16 +560,45 @@ model achieved superior AUC compared to Logistic Regression.
 ```
 
 ---
+<!-- _class: dense -->
+## การสร้างภาพ Diagram LaTeX ด้วย AI
 
+LaTeX สร้าง diagram ได้ด้วย package **TikZ** — ซับซ้อนแต่ AI ช่วยได้
+
+**Prompt สำหรับขอ AI สร้าง Flowchart:**
+
+```
+Create a LaTeX TikZ diagram showing a machine learning workflow:
+  Data Collection → Preprocessing → Feature Engineering
+       → Train/Test Split → Model Training → Evaluation
+
+Use simple rectangular boxes with arrows between them.
+Use the tikz package with arrows.meta library.
+Make it horizontal, suitable for an Elsevier journal figure.
+```
+
+> ✅ **ทางเลือกง่ายกว่า TikZ:**
+> วาด diagram ใน **draw.io / Canva / PowerPoint** → Export เป็น PNG/PDF → ใส่ใน LaTeX ด้วย `\includegraphics`
+
+---
+## LaTeX Output: Diagram
+
+<div class="img-edge-wrap">
+<img src="fig/LatexDiagram.png" width="700" class="img-edge">
+</div>
+
+
+---
 ## สมการ / Math ใน LaTeX
 <!-- _class: dense -->
 **Inline math** — ใช้ `$...$`
 
 ```latex
 The model performance was assessed using F1-score, defined 
-as $F_1 = 2 \cdot \frac{precision \cdot recall}
-{precision + recall}$.
+as $F_1 = 2 \cdot \frac{precision \cdot recall}{precision + recall}$.
 ```
+The model performance was assessed using F1-score, defined as $F_1 = 2 \cdot \frac{precision \cdot recall}
+{precision + recall}$.
 
 **Display math** — ใช้ `\begin{equation}...\end{equation}`
 
@@ -475,6 +608,9 @@ as $F_1 = 2 \cdot \frac{precision \cdot recall}
   \label{eq:auc}
 \end{equation}
 ```
+$$
+  \text{AUC} = \int_0^1 \text{TPR}(t) \, d[\text{FPR}(t)] \tag1
+$$
 
 > ✅ LaTeX เป็น gold standard สำหรับสมการ — Word ทำได้ไม่สวยเท่า
 

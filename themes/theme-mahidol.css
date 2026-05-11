@@ -371,3 +371,17 @@ section.dense h3 {
   font-size: 22px;
   margin-bottom: 0.2em;
 }
+
+/* ─── Utility: Image edge style ──────────────────────────────────── */
+/* Usage:                                                             */
+/*   <div class="img-edge-wrap">                                      */
+/*     <img src="..." class="img-edge">                               */
+/*   </div>                                                           */
+img.img-edge {
+  border: 1.5px solid #bbb;
+  border-radius: 4px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.18);
+}
+.img-edge-wrap {
+  padding-right: 40px;
+}
