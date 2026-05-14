@@ -217,7 +217,7 @@ LaTeX บน Cloud — ไม่ต้องติดตั้ง
 
 **วิธีที่ 2 — จาก Elsevier โดยตรง:**
 
-1. ไปที่ **[elsevier.com/authors/tools-and-resources/latex](https://www.elsevier.com/authors/tools-and-resources/latex)**
+1. ไปที่ **https://www.elsevier.com/researcher/author/policies-and-guidelines/latex-instructions**
 2. Download **elsarticle package**
 3. Upload ไปยัง Overleaf project
 
@@ -795,10 +795,6 @@ Add \caption{Model performance comparison} and \label{tab:performance}.
 4. Copy text ที่ได้ทั้งหมด
 5. วางใน **`references.bib`** ใน Overleaf
 
-**Alternative — ดึงจาก PubMed:**
-1. เปิดหน้า paper ใน PubMed
-2. คลิก **Cite** → **Download .nbib**
-3. แปลงเป็น BibTeX ด้วย **[converter.bibtex.online](https://converter.bibtex.online)**
 
 ---
 <!-- _class: dense -->
@@ -960,7 +956,6 @@ LaTeX Editor ยุคใหม่ที่ AI อยู่ในทุก Workf
 - **Fix with AI** — แก้ LaTeX error ด้วย AI ทันที
 - Sync กับ **Zotero** — จัดการ citation library
 
-> ✅ เหมาะมากสำหรับการแปลง Mini Proposal → Journal Paper ในวันนี้
 
 </div>
 </div>
@@ -978,7 +973,7 @@ LaTeX Editor ยุคใหม่ที่ AI อยู่ในทุก Workf
 | Voice to Code | ❌ | **✅** |
 | ราคา | ฟรี (จำกัด) | **ฟรี ทั้งหมด** |
 
-> **วันนี้เราจะใช้ Prism** ในช่วง Workshop เพื่อเขียน paper จาก Mini Proposal
+
 
 ---
 
